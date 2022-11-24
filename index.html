@@ -1,0 +1,1723 @@
+<html lang="en"><head>
+<title lang="en">Extracomputer for Twilight Imperium IV - Extraboard.net</title>
+<title lang="fr">Extracomputer pour Twilight Imperium IV - Extraboard.net</title>
+<title lang="sp">Extracomputer para Twilight Imperium IV - Extraboard.net</title>
+<link rel="stylesheet" type="text/css" href="ti4/tistyle.css">
+<link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rationale" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+<meta name="author" content="Stephane Demots">
+<meta charset="UTF-8">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+</head>
+<body onload="pageInit()">
+<div id="idLoading" class="clLoading" style="display: none;">
+<br><br><br><br><br>
+<div class="loader"></div>
+</div>
+<div id="idStartScreen" class="clStartScreen">
+<div id="idGameScreen" class="clGameScreen show clTitle" style="display: block;">
+<img src="ti4/img/tilogo.png" alt="TWILIGHT IMPERIUM IV">
+<br>
+<h1>EXTRACOMPUTER</h1>
+<h2 class="_en" style="">The full game assistant</h2>
+<h2 class="_fr" style="display: none;">Assistant de jeu</h2>
+<h2 class="_de" style="display: none;">Der Spieleassistent</h2>
+<h2 class="_ru" style="display: none;">Игровой помощник</h2>
+<h2 class="_sp" style="display: none;">Asistente de Juego</h2>
+<h2 class="clOffline orange" style="display: none;">- Offline Version -</h2>
+<div id="idNewsWindow" class="clOnline"><p>The Keleres Council from Codex III has been added !</p></div>
+<br>
+<img width="10%" src="ti4/img/icon_white.png" onclick="fctStartMenu()" alt="Click here">
+<br>
+<h2 class="_en" style="">Click the icon to start</h2>
+<h2 class="_fr" style="display: none;">Cliquer sur l'icone pour commencer</h2>
+<h2 class="_de" style="display: none;">Zum Starten auf das Symbol klicken</h2>
+<h2 class="_ru" style="display: none;">Кликните на иконку для запуска помощника</h2>
+<h2 class="_sp" style="display: none;">Click en el icono para comenzar</h2>
+<br>
+<div class="_ru" style="display: none;">
+<p>ЭТОТ САЙТ НЕ ОФИЦИАЛЬНЫЙ И НЕ БЫЛ ОДОБРЕН FANTASY FLIGHT GAMES.</p>
+<p>Сумерки Империи IV, игра, созданная компанией Fantasy Flight Games. Все права принадлежат <a href="https://www.fantasyflightgames.com">Fantasy Flight Games</a>.</p>
+<p>Гарантированно не содержит Некровирус.</p>
+</div>
+<div class="_de" style="display: none;">
+<p>DIES IST NICHT DIE OFFIZIELLE WEBSITE UND STEHT IN KEINEN ZUSAMMENHANG MIT FANTASY FLIGHT GAMES.</p>
+<p>Twilight Imperium IV, ein Spiel von Fantasy Flight Games. Copyrights <a href="https://www.fantasyflightgames.com">Fantasy Flight Games</a>.</p>
+<p>Garantiert Nekro virus frei.</p>
+</div>
+<div class="_en" style="">
+<p>THIS WEBSITE IS NOT OFFICIAL AND HAS NOT BEEN APPROVED BY FANTASY FLIGHT GAMES.</p>
+<p>Twilight Imperium IV, a game edited by Fantasy Flight Games. Copyrights <a href="https://www.fantasyflightgames.com">Fantasy Flight Games</a>.</p>
+<p>Guaranteed Nekro virus free.</p>
+</div>
+<div class="_fr" style="display: none;">
+<p>CE SITE N'EST PAS OFFICIEL ET N'EST PAS APPOUVE PAR FANTASY FLIGHT GAMES.</p>
+<p>Twilight Imperium IV, un jeu édité Fantasy Flight Games. Copyrights <a href="https://www.fantasyflightgames.com">Fantasy Flight Games</a>.</p>
+<p>Garantie sans virus Nekro.</p>
+</div>
+<div class="_sp" style="display: none;">
+<p>ESTE SITIO WEB NO ESTA OFICIALMENTE SOPORTADO NI APROBADO POR FANTASY FLIGHT GAMES.</p>
+<p>Twilight Imperium IV, un juego editado por Fantasy Flight Games. Copyrights <a href="https://www.fantasyflightgames.com">Fantasy Flight Games</a>.</p>
+<p>Garantizado libre de virus Nekro.</p>
+</div>
+</div>
+<div id="idMenuScreen" class="clGameScreen show clTitle" style="display: none;">
+<img src="ti4/img/tilogo.png" alt="TWILIGHT IMPERIUM IV">
+<br>
+<h1>EXTRACOMPUTER</h1>
+<br>
+<button class="clStartButton" onclick="fctStartScreen('newgame')">
+<span class="_en" style="">New game</span>
+<span class="_fr" style="display: none;">Nouvelle partie</span>
+<span class="_de" style="display: none;">Neues Spiel</span>
+<span class="_ru" style="display: none;">Новая игра</span>
+<span class="_sp" style="display: none;">Nuevo Juego</span>
+</button>
+<p id="idNoContinue">
+<span class="_en" style="">Saved game from previous version is not compatible</span>
+<span class="_fr" style="display: none;">La sauvegarde de la version précédente n'est pas compatible</span>
+<span class="_de" style="display: none;">Gespeicherte Spiele von Vorgängerversionen sind nicht kompatibel</span>
+<span class="_ru" style="display: none;">Сохраненная игра из предыдущей версии не поддерживается</span>
+<span class="_sp" style="display: none;">Juegos guardados de una version previa, no son compatibles</span>
+</p>
+<button id="idContinueButton" class="clStartButton" onclick="fctStartScreen('continue')">
+<span class="_en" style="">Continue game</span>
+<span class="_fr" style="display: none;">Continuer partie</span>
+<span class="_de" style="display: none;">Partie fortsetzen</span>
+<span class="_ru" style="display: none;">Продолжить игру</span>
+<span class="_sp" style="display: none;">Continuar Juego</span>
+</button>
+<button class="clStartButton" onclick="fctStartScreen('instructions')">
+<span class="_en" style="">How to use</span>
+<span class="_fr" style="display: none;">Guide d'utilisation</span>
+<span class="_de" style="display: none;">Anleitung</span>
+<span class="_ru" style="display: none;">Как пользоваться</span>
+<span class="_sp" style="display: none;">Manual de Uso</span>
+</button>
+<button class="clStartButton" onclick="parent.open('http://extraboard.net/ti4/extracomputer_stats')"><span class="_en" style="">Statistics</span><span class="_fr" style="display: none;">Statistiques</span><span class="_de" style="display: none;">Statistiken</span><span class="_ru" style="display: none;">Статистика</span><span class="_sp" style="display: none;">Estadíticas</span></button>
+<button class="clStartButton _en" onclick="parent.open('http://extraboard.net/ti4/glossary')" style="">Online glossary</button>
+<button class="clStartButton _fr" onclick="parent.open('http://extraboard.net/ti4/glossaire')" style="display: none;">Glossaire en ligne</button>
+<button class="clStartButton _de" onclick="parent.open('http://extraboard.net/ti4/glossary')" style="display: none;">Online Glossar</button>
+<button class="clStartButton _ru" onclick="parent.open('http://extraboard.net/ti4/glossary')" style="display: none;">Глоссарий</button>
+<button class="clStartButton _sp" onclick="parent.open('http://extraboard.net/ti4/glossary')" style="display: none;">Glosario en linea</button>
+<button class="clStartButton clOffline" onclick="parent.open('http://extraboard.net')" style="display: none;">Extraboard.net</button>
+<button class="clStartButton clLangButton _en" onclick="fctStartScreen('_fr')" style="">Français</button>
+<button class="clStartButton clLangButton _de" onclick="fctStartScreen('_fr')" style="display: none;">Français</button>
+<button class="clStartButton clLangButton _ru" onclick="fctStartScreen('_fr')" style="display: none;">Français</button>
+<button class="clStartButton clLangButton _sp" onclick="fctStartScreen('_fr')" style="display: none;">Français</button>
+<button class="clStartButton clLangButton _fr" onclick="fctStartScreen('_de')" style="display: none;">Deutsch</button>
+<button class="clStartButton clLangButton _en" onclick="fctStartScreen('_de')" style="">Deutsch</button>
+<button class="clStartButton clLangButton _ru" onclick="fctStartScreen('_de')" style="display: none;">Deutsch</button>
+<button class="clStartButton clLangButton _sp" onclick="fctStartScreen('_de')" style="display: none;">Deutsch</button>
+<button class="clStartButton clLangButton _de" onclick="fctStartScreen('_en')" style="display: none;">English</button>
+<button class="clStartButton clLangButton _fr" onclick="fctStartScreen('_en')" style="display: none;">English</button>
+<button class="clStartButton clLangButton _ru" onclick="fctStartScreen('_en')" style="display: none;">English</button>
+<button class="clStartButton clLangButton _sp" onclick="fctStartScreen('_en')" style="display: none;">English</button>
+<button class="clStartButton clLangButton _de" onclick="fctStartScreen('_ru')" style="display: none;">Мирный русский</button>
+<button class="clStartButton clLangButton _fr" onclick="fctStartScreen('_ru')" style="display: none;">Мирный русский</button>
+<button class="clStartButton clLangButton _en" onclick="fctStartScreen('_ru')" style="">Мирный русский</button>
+<button class="clStartButton clLangButton _sp" onclick="fctStartScreen('_ru')" style="display: none;">Мирный русский</button>
+<button class="clStartButton clLangButton _de" onclick="fctStartScreen('_sp')" style="display: none;">Español</button>
+<button class="clStartButton clLangButton _fr" onclick="fctStartScreen('_sp')" style="display: none;">Español</button>
+<button class="clStartButton clLangButton _en" onclick="fctStartScreen('_sp')" style="">Español</button>
+<button class="clStartButton clLangButton _ru" onclick="fctStartScreen('_sp')" style="display: none;">Español</button>
+<br><br>
+<div class="_en" style="">
+<p>THIS WEBSITE IS NOT OFFICIAL AND HAS NOT BEEN APPROVED BY FANTASY FLIGHT GAMES.</p>
+<p>Developed by Stéphane "Saturn Nitrik" Démots</p>
+</div>
+<div class="_fr" style="display: none;">
+<p>CE SITE N'EST PAS OFFICIEL ET N'EST PAS APPOUVE PAR FANTASY FLIGHT GAMES.</p>
+<p>Développé par Stéphane "Saturn Nitrik" Démots</p>
+</div>
+<div class="_de" style="display: none;">
+<p>DIES IST NICHT DIE OFFIZIELLE WEBSITE UND STEHT IN KEINEN ZUSAMMENHANG MIT FANTASY FLIGHT GAMES.</p>
+<p>Entwickelt von Stéphane "Saturn Nitrik" Démots</p>
+</div>
+<div class="_ru" style="display: none;">
+<p>ЭТОТ САЙТ НЕ ОФИЦИАЛЬНЫЙ И НЕ БЫЛ ОДОБРЕН FANTASY FLIGHT GAMES.</p>
+<p>Разработано Стефаном Демотсом, так же известном как Stéphane "Saturn Nitrik" Démots</p>
+</div>
+<div class="_sp" style="display: none;">
+<p>ESTE SITIO WEB NO ES OFICIAL Y NO HA SIDO APROBADO POR FANTASY FLIGHT GAMES.</p>
+<p>Desarrollado por Stéphane "Saturn Nitrik" Démots</p>
+</div>
+</div>
+<div id="idSetPlayersScreen" class="clGameScreen" style="display: none;">
+<h1 class="_en" style="">The game</h1><h1 class="_fr" style="display: none;">La partie</h1><h1 class="_de" style="display: none;">Die Partie</h1><h1 class="_ru" style="display: none;">Игра</h1><h1 class="_sp" style="display: none;">El Juego</h1>
+<div>
+<span class="clMiddleText _en" style="">Number of players:</span>
+<span class="clMiddleText _fr" style="display: none;">Nombre de joueurs:</span>
+<span class="clMiddleText _de" style="display: none;">Anzahl der Spieler</span>
+<span class="clMiddleText _ru" style="display: none;">Количество игроков</span>
+<span class="clMiddleText _sp" style="display: none;">Número de jugadores:</span>
+<span class="clNbPlayer" style="vertical-align:middle" id="idPlayerSlider" type="text" value="6">6</span>
+</div>
+<input type="range" min="3" max="8" value="6" class="slider" oninput="FctSetupNbPlayer(this.value)">
+<br>
+<p class="_en" style="">IMPORTANT: Respect the players placement around the table</p>
+<p class="_en" style=""><i style="color:grey">The map layout is just for indication and does not matter for the tool</i></p>
+<p class="_fr" style="display: none;">IMPORTANT: Respecter le placement des joueurs autour de la table</p>
+<p class="_fr" style="display: none;"><i style="color:grey">La disposition de la carte est pour indication et n'a pas d'incidence sur l'outil</i></p>
+<p class="_de" style="display: none;">WICHTIG: Bitte die Spielereinteilung um den Tisch einhalten</p>
+<p class="_de" style="display: none;"><i style="color:grey">The map layout is just for indication and does not matter for the tool.</i></p>
+<p class="_ru" style="display: none;">ВАЖНО: Правильно учитывайте расположение игроков за столом</p>
+<p class="_ru" style="display: none;"><i style="color:grey">The map layout is just for indication and does not matter for the tool.</i></p>
+<p class="_sp" style="display: none;">IMPORTANTE: Respeta la posicion de los jugadores en la mesa</p>
+<p class="_sp" style="display: none;"><i style="color:grey">El mapa mostrado es solo una indicacion, y no es importante para esta herramienta</i></p>
+<div id="idGameTable" class="classPlayerSetup">
+<div id="idTopTable" class="clTopTable">
+<div class="clSideMargin">
+<div class="classSetPlayerFrame" onclick="FctSetPlayer(this)" style="display: block;">
+<p class="classPlayerRaceName">Set player</p>
+</div>
+<div class="classSetPlayerFrame" onclick="FctSetPlayer(this)" style="display: none;">
+<p class="classPlayerRaceName">Set player</p>
+</div>
+</div>
+</div>
+<div id="idCenterTable" class="clCenterTable">
+<div id="idLeftTable" class="clLeftTable">
+<div class="clSideMargin">
+<div class="classSetPlayerFrame" onclick="FctSetPlayer(this)" style="display: block;">
+<p class="classPlayerRaceName">Set player</p>
+</div>
+<div class="classSetPlayerFrame" onclick="FctSetPlayer(this)" style="display: block;">
+<p class="classPlayerRaceName">Set player</p>
+</div>
+</div>
+</div>
+<div id="idTable" class="clTable" style="background-image: url(&quot;ti4/img/6p.png&quot;);">
+</div>
+<div id="idRightTable" class="clRightTable">
+<div class="clSideMargin">
+<div class="classSetPlayerFrame" onclick="FctSetPlayer(this)" style="display: block;">
+<p class="classPlayerRaceName">Set player</p>
+</div>
+<div class="classSetPlayerFrame" onclick="FctSetPlayer(this)" style="display: block;">
+<p class="classPlayerRaceName">Set player</p>
+</div>
+</div>
+</div>
+</div>
+<div id="idBottomTable" class="clTopTable">
+<div class="clSideMargin">
+<div class="classSetPlayerFrame" onclick="FctSetPlayer(this)" style="display: block;">
+<p class="classPlayerRaceName">Set player</p>
+</div>
+<div class="classSetPlayerFrame" onclick="FctSetPlayer(this)" style="display: none;">
+<p class="classPlayerRaceName">Set player</p>
+</div>
+</div>
+</div>
+</div>
+<br>
+<button onclick="location.reload()"><span class="_en" style="">Cancel</span><span class="_fr" style="display: none;">Annuler</span><span class="_de" style="display: none;">Abbrechen</span><span class="_ru" style="display: none;">Отмена</span><span class="_sp" style="display: none;">Cancelar</span></button>
+<button id="idStartGame" onclick="fctNext(1)" disabled=""><span class="_en" style="">Next</span><span class="_fr" style="display: none;">Suivant</span><span class="_de" style="display: none;">Nächster</span><span class="_ru" style="display: none;">Далее</span><span class="_sp" style="display: none;">Siguiente</span></button>
+</div>
+<div id="idGetReadyScreen" class="clGameScreen" style="display: none;">
+<h1 class="classCenter _en" style="">Build the galaxy</h1>
+<h1 class="classCenter _fr" style="display: none;">Construction de la galaxy</h1>
+<h1 class="classCenter _de" style="display: none;">Baue die Galaxy auf</h1>
+<h1 class="classCenter _ru" style="display: none;">Создайте карту галактики</h1>
+<h1 class="classCenter _sp" style="display: none;">Construcción de la Galaxia</h1>
+<br>
+<img id="idGalaxyAnim" class="clMarginAutoOnly" src="ti4/img/g1.png" alt="galaxy">
+<br><br><br>
+<button id="idStartTurn1" class="clStartButton" onclick="fctNext(2)">
+<span class="_en" style="">Start First Round</span>
+<span class="_fr" style="display: none;">Commencer le premier Tour</span>
+<span class="_de" style="display: none;">Starte die erste Runde</span>
+<span class="_ru" style="display: none;">Начать первый раунд</span>
+<span class="_sp" style="display: none;">Inicio del Primer Turno</span>
+</button>
+</div>
+</div>
+<div id="idModalSetPlayer" class="modal">
+<div class="modalcontent">
+<h2 class="clModal classCenter _en" style="">Player parameters</h2>
+<h2 class="clModal classCenter _fr" style="display: none;">Paramètres du joueur</h2>
+<h2 class="clModal classCenter _de" style="display: none;">Spiel Einstellungen </h2>
+<h2 class="clModal classCenter _ru" style="display: none;">Параметры игрока</h2>
+<h2 class="clModal classCenter _sp" style="display: none;">Parametros de Juego</h2>
+<br>
+<h3 class="clModal classCenter _en" style="">Units Color</h3>
+<h3 class="clModal classCenter _fr" style="display: none;">Couleur des unités</h3>
+<h3 class="clModal classCenter _de" style="display: none;">Farbe der Einheiten</h3>
+<h3 class="clModal classCenter _ru" style="display: none;">Цвет фигурок отрядов</h3>
+<h3 class="clModal classCenter _sp" style="display: none;">Color de las Unidades</h3>
+<div id="idColorList" class="clColorList">
+<div id="idTmpColor" class="clSetColor" onclick="fctSelectItem(this)"></div>
+<div id="idTmpColor" class="clSetColor show black" onclick="fctSelectItem(this)"></div><div id="idTmpColor" class="clSetColor show blue" onclick="fctSelectItem(this)"></div><div id="idTmpColor" class="clSetColor show green" onclick="fctSelectItem(this)"></div><div id="idTmpColor" class="clSetColor show purple" onclick="fctSelectItem(this)"></div><div id="idTmpColor" class="clSetColor show red" onclick="fctSelectItem(this)"></div><div id="idTmpColor" class="clSetColor show yellow" onclick="fctSelectItem(this)"></div><div id="idTmpColor" class="clSetColor show orange" onclick="fctSelectItem(this)"></div><div id="idTmpColor" class="clSetColor show hotpink" onclick="fctSelectItem(this)"></div></div>
+<br>
+<h3 class="clModal classCenter _en" style="">Faction</h3>
+<h3 class="clModal classCenter _fr" style="display: none;">Faction</h3>
+<h3 class="clModal classCenter _de" style="display: none;">Faction</h3>
+<h3 class="clModal classCenter _sp" style="display: none;">Facción</h3>
+<div id="idFactionList" class="clFactionList">
+<div id="idTmpFaction" class="clSetFaction" onclick="fctSelectItem(this)">TEMPLATE</div>
+<div id="" class="clSetFaction show" onclick="fctSelectItem(this)">Arborec</div><div id="" class="clSetFaction show" onclick="fctSelectItem(this)">Barony of Letnev</div><div id="" class="clSetFaction show" onclick="fctSelectItem(this)">Clan of Saar</div><div id="" class="clSetFaction show" onclick="fctSelectItem(this)">Embers of Muaat</div><div id="" class="clSetFaction show" onclick="fctSelectItem(this)">Emirates of Hacan</div><div id="" class="clSetFaction show" onclick="fctSelectItem(this)">Federation of Sol</div><div id="" class="clSetFaction show" onclick="fctSelectItem(this)">Ghosts of Creuss</div><div id="" class="clSetFaction show" onclick="fctSelectItem(this)">L1z1x Mindnet</div><div id="" class="clSetFaction show" onclick="fctSelectItem(this)">Mentak Coalition</div><div id="" class="clSetFaction show" onclick="fctSelectItem(this)">Naalu Collective</div><div id="" class="clSetFaction show" onclick="fctSelectItem(this)">Nekro Virus</div><div id="" class="clSetFaction show" onclick="fctSelectItem(this)">Sardak Norr</div><div id="" class="clSetFaction show" onclick="fctSelectItem(this)">Universities of Jol-Nar</div><div id="" class="clSetFaction show" onclick="fctSelectItem(this)">Winnu</div><div id="" class="clSetFaction show" onclick="fctSelectItem(this)">Xxcha Kingdoms</div><div id="" class="clSetFaction show" onclick="fctSelectItem(this)">Yin Brotherhood</div><div id="" class="clSetFaction show" onclick="fctSelectItem(this)">Yssaril Tribes</div><div id="" class="clSetFaction show clPoKFaction" onclick="fctSelectItem(this)">Argent Flight</div><div id="" class="clSetFaction show clPoKFaction" onclick="fctSelectItem(this)">Empyrean</div><div id="" class="clSetFaction show clPoKFaction" onclick="fctSelectItem(this)">Mahact Gene-Sorcerers</div><div id="" class="clSetFaction show clPoKFaction" onclick="fctSelectItem(this)">Naaz-Rokha Alliance</div><div id="" class="clSetFaction show clPoKFaction" onclick="fctSelectItem(this)">The Nomad</div><div id="" class="clSetFaction show clPoKFaction" onclick="fctSelectItem(this)">Titans of Ul</div><div id="" class="clSetFaction show clPoKFaction" onclick="fctSelectItem(this)">Vuil'Raith Cabal</div><div id="" class="clSetFaction show clCodexFaction" onclick="fctSelectItem(this)">The Council Keleres</div><div id="idTmpFaction" class="clSetFaction show" onclick="fctSelectItem(this)">???</div></div>
+<br>
+<div class="classCenter clMarginAutoOnly">
+<button id="idConfirmPlayer" onclick="fctConfirm(1)"><span class="_en" style="">Confirm</span><span class="_fr" style="display: none;">Confirmer</span><span class="_de" style="display: none;">Bestätigen</span><span class="_ru" style="display: none;">Подтвердить</span><span class="_sp" style="display: none;">Confirmar</span></button>
+</div>
+</div>
+</div>
+<div id="idModalInstructions" class="modal">
+<div class="modalcontent _en" style="">
+<h2 class="clModal classCenter">Presentation</h2>
+<p class="clModal classCenter">The ExtraComputer is a fan tool designed to be used on a screen aside your Twilight Imperium games</p>
+<img class="clMarginAuto" src="ti4/img/instructions2.png" alt="instructions">
+<p class="clModal classCenter">The support can be any large enough screen: TV, computer, projector, tablet.</p>
+<p class="clModal classCenter">The ExtraComputer takes in charge some process to improve the game flow and speed :</p>
+<ul class="clCenterlist classCenter">
+<li>Strategy selector</li>
+<li>Initiative turn tracker</li>
+<li>Victory Points counters</li>
+<li>Voting system for Galactic Councils</li>
+</ul>
+<br>
+<div class="classCenter">
+<button onclick="fctClose('idModalInstructions')">Close</button>
+</div>
+</div>
+<div class="modalcontent _fr" style="display: none;">
+<h2 class="clModal classCenter">Présentation</h2>
+<p class="clModal classCenter">ExtraComputer est un assistant à projecter sur un écran proche de votre partie de Twilight Imperium</p>
+<img class="clMarginAuto" src="ti4/img/instructions2.png" alt="instructions">
+<p class="clModal classCenter">Le support peut être n'importe quel écran assez large: TV, PC, projecteur, tablette.</p>
+<p class="clModal classCenter">ExtraComputer prends en charge plusieurs processus pour améorer la fluidité et la vitesse de jeu:</p>
+<ul class="clCenterlist classCenter">
+<li>Choix des Stratégies</li>
+<li>Suivi de l'ordre d'initiative</li>
+<li>Compteur de Points de Victoire</li>
+<li>Compteur de votes pour le conseil Galactique</li>
+</ul>
+<br>
+<div class="classCenter">
+<button onclick="fctClose('idModalInstructions')">Fermer</button>
+</div>
+</div>
+<div class="modalcontent _de" style="display: none;">
+<h2 class="clModal classCenter">Voerstellung</h2>
+<p class="clModal classCenter">ExtraComputer ist ein Fan Tools, welches als Unterstützungsanzeige neben dem Twilight Imperium verwendet werden soll</p>
+<img class="clMarginAuto" src="ti4/img/instructions2.png" alt="instructions">
+<p class="clModal classCenter">Als Anzeige eignet sich jede Art von Display: Fernseher, Computer, Projektor, Laptop, Tablett</p>
+<p class="clModal classCenter">ExtraComputer unterstützt bei der Erhöhung des Spielflusses und der Spielgeschwindigkeit:</p>
+<ul class="clCenterlist classCenter">
+<li>Auswahl der Strategie</li>
+<li>Steuerung der Initiative </li>
+<li>Siegpunkt Zähler</li>
+<li>Abstimmungssystem des Galaktischen Konzils</li>
+</ul>
+<br>
+<div class="classCenter">
+<button onclick="fctClose('idModalInstructions')">Close</button>
+</div>
+</div>
+<div class="modalcontent _ru" style="display: none;">
+<h2 class="clModal classCenter">О приложении</h2>
+<p class="clModal classCenter">ExtraComputer — это помощник, который вы можете использовать на экране во время ваших партий в Сумерки Империи</p>
+<img class="clMarginAuto" src="ti4/img/instructions2.png" alt="instructions">
+<p class="clModal classCenter">Поддерживаются любые экраны подходящего размера: телевизор, монитор компьютера, прожектор, планшет.</p>
+<p class="clModal classCenter">ExtraComputer берет на себя часть работы по ведению партии, чтобы ускорить игровой процесс и сделать его приятнее:</p>
+<ul class="clCenterlist classCenter">
+<li>Выбор карт стратегий</li>
+<li>Трекер порядка инициативы</li>
+<li>Счетчик победных очков</li>
+<li>Голосование по картам политики</li>
+</ul>
+<br>
+<div class="classCenter">
+<button onclick="fctClose('idModalInstructions')">Close</button>
+</div>
+</div>
+<div class="modalcontent _sp" style="display: none;">
+<h2 class="clModal classCenter">Presentación</h2>
+<p class="clModal classCenter">La ExtraComputer es una herramienta diseñada por aficionados para ser usada en una pantalla junto a tu juego de Twilight Imperium</p>
+<img class="clMarginAuto" src="ti4/img/instructions2.png" alt="instructions">
+<p class="clModal classCenter">La puedes utilizar en cualquier soporte de tamaño suficiente: TV, computadora, proyector, tableta.</p>
+<p class="clModal classCenter">La ExtraComputer se encarga de algunos procesos que mejoran y aceleran el flujo de juego:</p>
+<ul class="clCenterlist classCenter">
+<li>Selector de Estrategia</li>
+<li>Marcador de Iniciativa de los turnos</li>
+<li>Contador de Puntos de Victoria</li>
+<li>Sistema de Votación para el Consejo Galáctico</li>
+</ul>
+<br>
+<div class="classCenter">
+<button onclick="fctClose('idModalInstructions')">Cerrar</button>
+</div>
+</div>
+</div>
+<div id="idVPMeter" class="header" style="display: none;">
+<span id="idVP0" class="clVPPlayerCase" onclick="fctVPEdit(this,1)">
+<label class="clVPFactionIcon"><label class="clVPFactionName">Sol</label></label>
+<label class="clVPCount" type="text">00</label>
+</span>
+<img class="clArrow2" src="ti4/img/arrow2.png">
+<span id="idVP1" class="clVPPlayerCase" onclick="fctVPEdit(this,1)">
+<label class="clVPFactionIcon"><label class="clVPFactionName">Sol</label></label>
+<label class="clVPCount" type="text">00</label>
+</span>
+<img class="clArrow2" src="ti4/img/arrow2.png">
+<span id="idVP2" class="clVPPlayerCase" onclick="fctVPEdit(this,1)">
+<label class="clVPFactionIcon"><label class="clVPFactionName">Sol</label></label>
+<label class="clVPCount" type="text">00</label>
+</span>
+<img class="clArrow2" src="ti4/img/arrow2.png">
+<span id="idVP3" class="clVPPlayerCase" onclick="fctVPEdit(this,1)">
+<label class="clVPFactionIcon"><label class="clVPFactionName">Sol</label></label>
+<label class="clVPCount" type="text">00</label>
+</span>
+<img class="clArrow2" src="ti4/img/arrow2.png">
+<span id="idVP4" class="clVPPlayerCase" onclick="fctVPEdit(this,1)">
+<label class="clVPFactionIcon"><label class="clVPFactionName">Sol</label></label>
+<label class="clVPCount" type="text">00</label>
+</span>
+<img class="clArrow2" src="ti4/img/arrow2.png">
+<span id="idVP5" class="clVPPlayerCase" onclick="fctVPEdit(this,1)">
+<label class="clVPFactionIcon"><label class="clVPFactionName">Sol</label></label>
+<label class="clVPCount" type="text">00</label>
+</span>
+<img class="clArrow2" src="ti4/img/arrow2.png">
+<span id="idVP6" class="clVPPlayerCase" onclick="fctVPEdit(this,1)">
+<label class="clVPFactionIcon"><label class="clVPFactionName">Sol</label></label>
+<label class="clVPCount" type="text">00</label>
+</span>
+<img class="clArrow2" src="ti4/img/arrow2.png">
+<span id="idVP7" class="clVPPlayerCase" onclick="fctVPEdit(this,1)">
+<label class="clVPFactionIcon"><label class="clVPFactionName">Sol</label></label>
+<label class="clVPCount" type="text">00</label>
+</span>
+</div>
+<div class="clNavBar" style="display: none;">
+<div class="clClkBar clNavItem">
+<span class="clClk">
+<span id="idGameDuration" class="clTime" onclick="fctClock('toggle')">-Pause-</span>
+<div class="progress" onclick="fctDecision()">
+<div id="idDecisionTimer" class="progress-bar" role="progressbar" style="width:70%"></div>
+<div id="idDecisionValue" class="progressValue">90</div>
+</div>
+</span>
+</div>
+<span id="idPhaseFrame" class="clPhase clNavItem">Loading...</span>
+<span class="clNavItem clAbout dropdown" id="idAboutTabButton" onmouseover="resetSubMenu('idAboutMenu')">
+<div id="idAboutMenu" class="dropdown-content">
+<a onclick="showOptionPanel()">Options</a>
+<a onclick="FctAbout('infoFAQ')"><span class="_en" style="">F.A.Q</span><span class="_fr" style="display: none;">F.A.Q</span><span class="_de" style="display: none;">F.A.Q</span><span class="_ru" style="display: none;">Часто задаваемые вопросы</span><span class="_sp" style="display: none;">F.A.Q</span></a>
+<a onclick="FctAbout('infoAbout')"><span class="_en" style="">About</span><span class="_fr" style="display: none;">A propos</span><span class="_de" style="display: none;">Über</span><span class="_ru" style="display: none;">О приложении</span><span class="_sp" style="display: none;">Acerca de</span></a>
+<a onclick="FctAbout('infoChangeLog')"><span class="_en" style="">Changelog</span><span class="_fr" style="display: none;">Versions</span><span class="_de" style="display: none;">Änderungen</span><span class="_ru" style="display: none;">Список изменений</span><span class="_sp" style="display: none;">Versión</span></a>
+<a onclick="parent.open('http://extraboard.net/contact/')">Contact</a>
+</div>
+</span>
+</div>
+<div id="idTurnOrderTab" class="tabcontent" style="display: none;">
+<div class="classCenter">
+<h2 id="idPlayerToChoose" type="text" value="t"></h2>
+</div>
+<table id="idStrategyTable" class="classStrategyTable">
+<tbody><tr>
+<td id="idNaaluFr" class="classStrategyFrame" onclick="fctStrategyFrame(this)">
+<div class="container">
+<h2 id="idNaaluFactionChooser" class="classFactionChooser flexFont" style="font-size: 9.2px;">Naalu Collective</h2>
+<img id="idNaaluFactionIcon" class="classFactionIcon" src="">
+</div>
+<h2 id="idNaaluStrategy" class="classStrategyNameText flexFont" style="font-size: 10px;"></h2>
+<h2 id="idNaaluStrategy2" class="classStrategy2NameText flexFont" style="font-size: 10px;"></h2>
+<span class="classStrategyRankText">0</span>
+<div class="container clTrade clOpacity0">
+<span class="clTradeNb"></span>
+<img class="clTradeIcon" src="">
+</div>
+</td>
+<td class="classStrategyFrame" onclick="fctStrategyFrame(this)">
+<div class="container">
+<h2 class="classFactionChooser flexFont" style="font-size: 10px;"></h2>
+<img class="classFactionIcon" src="">
+</div>
+<h2 class="classStrategyNameText flexFont" style="font-size: 10px;"></h2>
+<h2 class="classStrategy2NameText flexFont" style="font-size: 10px;"></h2>
+<span class="classStrategyRankText"></span>
+<div class="container clTrade clOpacity0">
+<span class="clTradeNb">+0</span>
+<img class="clTradeIcon" src="ti4/img/tg.png">
+</div>
+</td>
+<td class="classStrategyFrame" onclick="fctStrategyFrame(this)">
+<div class="container">
+<h2 class="classFactionChooser flexFont" style="font-size: 10px;"></h2>
+<img class="classFactionIcon" src="">
+</div>
+<h2 class="classStrategyNameText flexFont" style="font-size: 10px;"></h2>
+<h2 class="classStrategy2NameText flexFont" style="font-size: 10px;"></h2>
+<span class="classStrategyRankText"></span>
+<div class="container clTrade clOpacity0">
+<span class="clTradeNb">+0</span>
+<img class="clTradeIcon" src="ti4/img/tg.png">
+</div>
+</td>
+<td class="classStrategyFrame" onclick="fctStrategyFrame(this)">
+<div class="container">
+<h2 class="classFactionChooser flexFont" style="font-size: 10px;"></h2>
+<img class="classFactionIcon" src="">
+</div>
+<h2 class="classStrategyNameText flexFont" style="font-size: 10px;"></h2>
+<h2 class="classStrategy2NameText flexFont" style="font-size: 10px;"></h2>
+<span class="classStrategyRankText"></span>
+<div class="container clTrade clOpacity0">
+<span class="clTradeNb">+0</span>
+<img class="clTradeIcon" src="ti4/img/tg.png">
+</div>
+</td>
+<td class="classStrategyFrame" onclick="fctStrategyFrame(this)">
+<div class="container">
+<h2 class="classFactionChooser flexFont" style="font-size: 10px;"></h2>
+<img class="classFactionIcon" src="">
+</div>
+<h2 class="classStrategyNameText flexFont" style="font-size: 10px;"></h2>
+<h2 class="classStrategy2NameText flexFont" style="font-size: 10px;"></h2>
+<span class="classStrategyRankText"></span>
+<div class="container clTrade clOpacity0">
+<span class="clTradeNb">+0</span>
+<img class="clTradeIcon" src="ti4/img/tg.png">
+</div>
+</td>
+<td class="classStrategyFrame" onclick="fctStrategyFrame(this)">
+<div class="container">
+<h2 class="classFactionChooser flexFont" style="font-size: 10px;"></h2>
+<img class="classFactionIcon" src="">
+</div>
+<h2 class="classStrategyNameText flexFont" style="font-size: 10px;"></h2>
+<h2 class="classStrategy2NameText flexFont" style="font-size: 10px;"></h2>
+<span class="classStrategyRankText"></span>
+<div class="container clTrade clOpacity0">
+<span class="clTradeNb">+0</span>
+<img class="clTradeIcon" src="ti4/img/tg.png">
+</div>
+</td>
+<td class="classStrategyFrame" onclick="fctStrategyFrame(this)">
+<div class="container">
+<h2 class="classFactionChooser flexFont" style="font-size: 10px;"></h2>
+<img class="classFactionIcon" src="">
+</div>
+<h2 class="classStrategyNameText flexFont" style="font-size: 10px;"></h2>
+<h2 class="classStrategy2NameText flexFont" style="font-size: 10px;"></h2>
+<span class="classStrategyRankText"></span>
+<div class="container clTrade clOpacity0">
+<span class="clTradeNb">+0</span>
+<img class="clTradeIcon" src="ti4/img/tg.png">
+</div>
+</td>
+<td class="classStrategyFrame" onclick="fctStrategyFrame(this)">
+<div class="container">
+<h2 class="classFactionChooser flexFont" style="font-size: 10px;"></h2>
+<img class="classFactionIcon" src="">
+</div>
+<h2 class="classStrategyNameText flexFont" style="font-size: 10px;"></h2>
+<h2 class="classStrategy2NameText flexFont" style="font-size: 10px;"></h2>
+<span class="classStrategyRankText"></span>
+<div class="container clTrade clOpacity0">
+<span class="clTradeNb">+0</span>
+<img class="clTradeIcon" src="ti4/img/tg.png">
+</div>
+</td>
+<td class="classStrategyFrame" onclick="fctStrategyFrame(this)">
+<div class="container">
+<h2 class="classFactionChooser flexFont" style="font-size: 10px;"></h2>
+<img class="classFactionIcon" src="">
+</div>
+<h2 class="classStrategyNameText flexFont" style="font-size: 10px;"></h2>
+<h2 class="classStrategy2NameText flexFont" style="font-size: 10px;"></h2>
+<span class="classStrategyRankText"></span>
+<div class="container clTrade clOpacity0">
+<span class="clTradeNb">+0</span>
+<img class="clTradeIcon" src="ti4/img/tg.png">
+</div>
+</td>
+</tr>
+</tbody></table>
+<div class="clFocusItems">
+<span class="clLink">&nbsp;</span>
+<span class="clLink">&nbsp;</span>
+<span class="clLink">&nbsp;</span>
+<span class="clLink">&nbsp;</span>
+<span class="clLink">&nbsp;</span>
+<span class="clLink">&nbsp;</span>
+<span class="clLink">&nbsp;</span>
+<span class="clLink">&nbsp;</span>
+<span class="clLink">&nbsp;</span>
+</div>
+<div id="idPlayerFocus">
+<div id="idFactionIcon" class="clFocusBlockV clFlexGrow1">
+<span id="idFactionFocus" class="clh2 classCenter">Naalu</span>
+<span id="idFactoinClk" class="clh2 classCenter">000:00</span>
+</div>
+<div class="clFocusBlockV clFlexGrow3">
+<div class="clFocusBlockH">
+<button id="idActionS1" class="StratButton clFlexGrow1 clActionButton" onclick="FctAction(this)">Strategy</button>
+<button id="idActionS2" class="StratButton clFlexGrow1 clActionButton" onclick="FctAction(this)">Strategy2</button>
+<button id="idActionTactical" class="StratButton clFlexGrow1 clActionButton" onclick="FctAction(this)"><span class="_en" style="">Tactical / Component</span><span class="_fr" style="display: none;">Tactique / Elément</span><span class="_de" style="display: none;">Taktik / Komponente</span><span class="_ru" style="display: none;">Тактическое / Компонентное</span><span class="_sp" style="display: none;">Tactica / Componente</span></button>
+<button id="idActionPass" class="StratButton clFlexGrow1 clActionButton" onclick="FctAction(this)"><span class="_en" style="">Pass</span><span class="_fr" style="display: none;">Passer</span><span class="_de" style="display: none;">Passen</span><span class="_ru" style="display: none;">Пас</span><span class="_sp" style="display: none;">Pasar</span></button>
+</div>
+<div class="clFocusBlockV">
+<span id="idActionTxt" class="clh2 classCenter clFlexGrow3 clAction1 clFocusBlockH">
+<span id="idNbAction"></span>
+&nbsp; &nbsp;
+<span id="idSpin" class="loader">&nbsp;</span>
+</span>
+<button id="idActionEnd" class="StratButton clFlexGrow1" onclick="fctResolveAction()"><span class="_en" style="">Next player</span><span class="_fr" style="display: none;">Joueur suivant</span><span class="_de" style="display: none;">Nächster Spieler</span><span class="_ru" style="display: none;">Следующий игрок</span><span class="_sp" style="display: none;">Siguiente Jugador</span></button></div>
+</div>
+</div>
+<br>
+<div class="classCenter">
+<button id="idStrategyDone" class="DoneButton clMarginAutoOnly" onclick="fctStrategyDone()"><span class="_en" style="">Done</span><span class="_fr" style="display: none;">Terminer</span><span class="_de" style="display: none;">Fertig</span><span class="_ru" style="display: none;">Готово</span><span class="_sp" style="display: none;">Hecho</span></button>
+<button class="classCenter clMarginAutoOnly clStratEndButton" onclick="fctRstStrategyPhase()"><span class="_en" style="">Reset the phase</span><span class="_fr" style="display: none;">Recommencer la phase</span><span class="_de" style="display: none;">Phase zurücksetzen</span><span class="_ru" style="display: none;">Сбросить фазу</span><span class="_sp" style="display: none;">Reiniciar Fase</span></button>
+<button class="classCenter clMarginAutoOnly clStratEndButton" onclick="fctEffectStrategyPhase('block')"><span class="_en" style="">Play End phase card effect</span><span class="_fr" style="display: none;">Jouer une carte Fin de phase</span><span class="_de" style="display: none;">Spiele Karteneffekt zum Ende der Phase</span><span class="_ru" style="display: none;">Разыграть карту с эффектом в конце фазы стратегии</span><span class="_sp" style="display: none;">Jugar Efecto de Carta de Final de Fase</span></button>
+<button class="classCenter clMarginAutoOnly clStratEndButton" onclick="fctEndStrategyPhase()"><span class="_en" style="">End the phase</span><span class="_fr" style="display: none;">Fin de phase</span><span class="_de" style="display: none;">Ende der Phase</span><span class="_ru" style="display: none;">Закончить фазу</span><span class="_sp" style="display: none;">Final de Fase</span></button>
+</div>
+</div>
+<div id="idSetSpeaker" class="modal">
+<div class="modalcontent">
+<h2 class="clModal classCenter _en" style="">Set the Speaker</h2>
+<h2 class="clModal classCenter _fr" style="display: none;">Choisir l'Orateur</h2>
+<h2 class="clModal classCenter _de" style="display: none;">Sprecher auswählen</h2>
+<h2 class="clModal classCenter _ru" style="display: none;">Назначить председателя</h2>
+<h2 class="clModal classCenter _sp" style="display: none;">Elegir Portavoz</h2>
+<div id="idSpeakerPlayers" class="clSpeakerWin">
+</div>
+<div class="classCenter">
+<button id="idRandomSpeaker" class="classCenter clMarginAutoOnly" onclick="fctRandomSpeaker()"><span class="_en" style="">Random</span><span class="_fr" style="display: none;">Aléatoire</span><span class="_de" style="display: none;">Zufall</span><span class="_ru" style="display: none;">Случайно</span><span class="_sp" style="display: none;">Aleatorio</span></button>
+</div>
+</div>
+</div>
+<div id="idTelepathic" class="modal">
+<div class="modalcontent">
+<h2 class="clModal classCenter _en" style="">Select Player</h2>
+<h2 class="clModal classCenter _fr" style="display: none;">Choisir un joueur</h2>
+<h2 class="clModal classCenter _de" style="display: none;">Suche Spieler aus</h2>
+<h2 class="clModal classCenter _ru" style="display: none;">Выбрать игрока</h2>
+<h2 class="clModal classCenter _sp" style="display: none;">Seleccione un Jugador</h2>
+<div id="idTelephaticPlayers" class="clSpeakerWin">
+</div>
+<div class="classCenter">
+<button class="classCenter clMarginAutoOnly" onclick="fctSetTelephatic(255)"><span class="_en" style="">Cancel</span><span class="_fr" style="display: none;">Annuler</span><span class="_de" style="display: none;">Abbruch</span><span class="_ru" style="display: none;">Отмена</span><span class="_sp" style="display: none;">Cancelar</span></button>
+</div>
+</div>
+</div>
+<div id="idStrategyEnd" class="modal">
+<div class="modalcontent">
+<h2 class="clModal classCenter _en" style="">Effects at Strategy Phase ending</h2>
+<h2 class="clModal classCenter _fr" style="display: none;">Effets de fin de Phase Stratégie</h2>
+<h2 class="clModal classCenter _de" style="display: none;">Auswirkungen am Ende der Strategiephase</h2>
+<h2 class="clModal classCenter _ru" style="display: none;">Эффекты В конце фазы стратегии"</h2>
+<h2 class="clModal classCenter _sp" style="display: none;">Efectos al Final de la Fase de Estrategia</h2>
+<div class="classPlanetList">
+<div id="idImperialArbiterCard" class="clCard flexfont" onclick="fctStrategyEndEffect(0)">
+<br>
+<div><span class="_en" style="">Imperial Arbiter</span><span class="_fr" style="display: none;">Arbitre Imperial</span><span class="_de" style="display: none;">Imperialer Schiedsrichter</span><span class="_ru" style="display: none;">Имперский арбитр</span><span class="_sp" style="display: none;">Arbitrador Imperial</span></div>
+<div><span class="_en" style="">(Action card)</span><span class="_fr" style="display: none;">(Carte Action)</span><span class="_de" style="display: none;">(Aktionskarte)</span><span class="_ru" style="display: none;">(Карта действия)</span><span class="_sp" style="display: none;">(Carta de Acción (Ley))</span></div>
+</div>
+<div id="idAcquiescenceCard" class="clCard flexfont" onclick="fctStrategyEndEffect(0)">
+<br>
+<div><span class="_en" style="">Acquiescence</span><span class="_fr" style="display: none;">Consentement</span><span class="_de" style="display: none;">Duldung</span><span class="_ru" style="display: none;">Уступка</span><span class="_sp" style="display: none;">Consentimiento</span></div>
+<div><span class="_en" style="">(Winnu Promissory Note)</span><span class="_fr" style="display: none;">(Billet Winnu)</span><span class="_de" style="display: none;">(Winnu Vertrags-Frakionskarte)</span><span class="_ru" style="display: none;">(Карта обещания Винну)</span><span class="_sp" style="display: none;">(Promesa Winnu)</span></div>
+</div>
+<div id="idQuantumDatahubNodeCard" class="clCard flexfont" onclick="fctStrategyEndEffect(0)">
+<br>
+<div><span class="_en" style="">Quantum Datahub Node</span><span class="_fr" style="display: none;">Noeud de données quantique</span><span class="_de" style="display: none;">Quantennetzwerk</span><span class="_ru" style="display: none;">Квантовый Информационный Центр</span><span class="_sp" style="display: none;">Centro de Procesamiento Cuantico</span></div>
+<div><span class="_en" style="">(Hacan Technology)</span><span class="_fr" style="display: none;">(Technologie Hacan)</span><span class="_de" style="display: none;">(Hacan Technologie)</span><span class="_ru" style="display: none;">(Технология Хаканских Эмиратов)</span><span class="_sp" style="display: none;">(Technologia Hacan)</span></div>
+</div>
+<div id="idTelepathicCard" class="clCard flexfont" onclick="fctStrategyEndEffect(1)">
+<br>
+<div><span class="_en" style="">Gift of Prescience</span><span class="_fr" style="display: none;">Don de prémonition</span><span class="_de" style="display: none;">Die Gabe der Hellsicht</span><span class="_ru" style="display: none;">Дар Предвидения</span><span class="_sp" style="display: none;">Don de la Clarividencia</span></div>
+<div><span class="_en" style="">(Naalu Promissory Note)</span><span class="_fr" style="display: none;">(Billet Naalu)</span><span class="_de" style="display: none;">(Naalu Vertrags-Fraktionskarte)</span><span class="_ru" style="display: none;">(Карта обещания Наалу)</span><span class="_sp" style="display: none;">(Promesa Naalu)</span></div>
+</div>
+</div>
+<br><br>
+<div class="classCenter">
+<button class="classCenter clMarginAutoOnly" onclick="fctEffectStrategyPhase('none')"><span class="_en" style="">Back</span><span class="_fr" style="display: none;">Retour</span><span class="_de" style="display: none;">Zurück</span><span class="_ru" style="display: none;">Назад</span><span class="_sp" style="display: none;">Volver</span></button>
+</div>
+</div>
+</div>
+<div id="idStrategyEffectSwap" class="modal">
+<div class="modalcontent">
+<h2 class="clModal classCenter _en" style="">Swap strategies</h2>
+<h2 class="clModal classCenter _fr" style="display: none;">Inverser les stratégies</h2>
+<h2 class="clModal classCenter _de" style="display: none;">Tausche Strategien</h2>
+<h2 class="clModal classCenter _ru" style="display: none;">Поменять карты стратегий</h2>
+<h2 class="clModal classCenter _sp" style="display: none;">Intercambiar Estrategias</h2>
+<div id="idSwapList" class="clMarginAutoOnly">
+<div class="clSwapStrat" onclick="fctSwap(this)">template</div>
+</div>
+<div class="classCenter">
+<button id="idSwapEndButton" class="classCenter clMarginAutoOnly" onclick="fctSwapStop()"><span class="_en" style="">Done</span><span class="_fr" style="display: none;">Terminer</span><span class="_de" style="display: none;">Fertig</span><span class="_ru" style="display: none;">Готово</span><span class="_sp" style="display: none;">Hecho</span></button>
+</div>
+</div>
+</div>
+<div id="idStatusTab" class="tabcontent" style="display: none;">
+<div id="idStatus1">
+<p class="clh3 clOrderTitle classCenter _en" style="">Initiative order</p>
+<p class="clh3 clOrderTitle classCenter _fr" style="display: none;">Ordre par Initiative</p>
+<p class="clh3 clOrderTitle classCenter _de" style="display: none;">Reihenfolge der Initiative</p>
+<p class="clh3 clOrderTitle classCenter _ru" style="display: none;">Порядок инициативы</p>
+<p class="clh3 clOrderTitle classCenter _sp" style="display: none;">Orden de Iniciativa</p>
+<div class="clFocusBlockH">
+<img class="clArrow3" src="">
+<span class="clh3 clFactionStatus">Naalu</span>
+<img class="clArrow3" src="ti4/img/arrow2.png">
+<span class="clh3 clFactionStatus">Naalu</span>
+<img class="clArrow3" src="ti4/img/arrow2.png">
+<span class="clh3 clFactionStatus">Naalu</span>
+<img class="clArrow3" src="ti4/img/arrow2.png">
+<span class="clh3 clFactionStatus">Naalu</span>
+<img class="clArrow3" src="ti4/img/arrow2.png">
+<span class="clh3 clFactionStatus">Naalu</span>
+<img class="clArrow3" src="ti4/img/arrow2.png">
+<span class="clh3 clFactionStatus">Naalu</span>
+<img class="clArrow3" src="ti4/img/arrow2.png">
+<span class="clh3 clFactionStatus">Naalu</span>
+<img class="clArrow3" src="ti4/img/arrow2.png">
+<span class="clh3 clFactionStatus">Naalu</span>
+<img class="clArrow3" src="ti4/img/arrow2.png">
+<span class="clh3 clFactionStatus">Naalu</span>
+</div>
+<div class="clAlignText _en" style="">
+<h3 class="clOverable">1. Score 1 public and/or 1 secret objective</h3>
+<h3 class="clOverable">2. Flip next public objective</h3>
+<h3 class="clOverable">3. Draw 1 action card</h3>
+<h3 class="clOverable">4. Return Command Tokens</h3>
+<h3 class="clOverable">5. Gain 2 Command Tokens and redistribute</h3>
+<h3 class="clOverable">6. Ready all cards</h3>
+<h3 class="clOverable">7. Repair units</h3>
+<h3 class="clOverable">8. Return Strategies</h3>
+</div>
+<div class="clAlignText _fr" style="display: none;">
+<h3 class="clOverable">1. Valider 1 objectif Public et/ou 1 objectif secret</h3>
+<h3 class="clOverable">2. Réveler 1 objectif public</h3>
+<h3 class="clOverable">3. Piocher 1 carte Action</h3>
+<h3 class="clOverable">4. Récuperer les Pions de Commandement</h3>
+<h3 class="clOverable">5. Gagner 2 Pions de Commandement et les redistribuer</h3>
+<h3 class="clOverable">6. Restaurer toutes les cartes</h3>
+<h3 class="clOverable">7. Réparer les unités</h3>
+<h3 class="clOverable">8. Rendre les cartes Stratégies</h3>
+</div>
+<div class="clAlignText _de" style="display: none;">
+<h3 class="clOverable">1. Werte einen öffentlichen und/oder einen geheimen Auftrag</h3>
+<h3 class="clOverable">2. Nächsten öffentlichen Auftrag aufdecken</h3>
+<h3 class="clOverable">3. Eine Aktionskarte ziehen</h3>
+<h3 class="clOverable">4. Kommandomarker entfernen</h3>
+<h3 class="clOverable">5. Zwei Kommandomarker erhalten und umverteilen</h3>
+<h3 class="clOverable">6. Karten Spielbereit machen</h3>
+<h3 class="clOverable">7. Einheiten reparieren</h3>
+<h3 class="clOverable">8. Strategiekarten zurücklegen</h3>
+</div>
+<div class="clAlignText _ru" style="display: none;">
+<h3 class="clOverable">1. Выполните 1 общую и/или 1 секретную цель</h3>
+<h3 class="clOverable">2. Раскройте карту общей цели</h3>
+<h3 class="clOverable">3. Возьмите 1 карту действий</h3>
+<h3 class="clOverable">4. Верните жетоны приказов</h3>
+<h3 class="clOverable">5. Получите (2 по умолчанию) и распределите жетоны приказов</h3>
+<h3 class="clOverable">6. Подготовьте карты</h3>
+<h3 class="clOverable">7. Отремонтируйте отряды</h3>
+<h3 class="clOverable">8. Верните карты стратегий</h3>
+</div>
+<div class="clAlignText _sp" style="display: none;">
+<h3 class="clOverable">1. Anota puntos por 1 ojetivo público y/o 1 objetivo secreto</h3>
+<h3 class="clOverable">2. Muestra el siguiente objetivo público</h3>
+<h3 class="clOverable">3. Toma 1 Carta de Acción</h3>
+<h3 class="clOverable">4. Retira las fichas de mando</h3>
+<h3 class="clOverable">5. Gana 2 fichas de mando y redistribuyelas</h3>
+<h3 class="clOverable">6. Prepara todas las cartas</h3>
+<h3 class="clOverable">7. Repara las unidades</h3>
+<h3 class="clOverable">8. Devuelve las cartas de Estrategia</h3>
+</div>
+</div>
+<div id="idStatus2">
+<br>
+<br>
+<div id="idMecatolFree1" class="card-container">
+<div class="card" onmouseover="fctMecatolRex(1)" onclick="fctMecatolRex(2)" onmouseout="fctMecatolRex(0)">
+<div class="side"><img src="ti4/img/custodians.png"></div>
+<div class="side back"></div>
+</div>
+</div>
+<div id="idMecatolFree2" class="card-container" onclick="fctMecatolRex(2)"><img src="ti4/img/mrex3.png"></div>
+<h2 id="idCustodians" class="classCenter">...</h2>
+</div>
+<div class="classCenter">
+<button id="idStatusNext" class="clMarginAutoOnly" onclick="fctStatusNext()"><span class="_en" style="">Next</span><span class="_fr" style="display: none;">Suivant</span><span class="_de" style="display: none;">Nächster</span><span class="_ru" style="display: none;">Далее</span><span class="_sp" style="display: none;">Siguiente</span></button>
+</div>
+</div>
+<div id="idAgendaTab" class="tabcontent" style="display: none;">
+<div id="idAgendaVotePage" class="clDisplayNone">
+<h2 id="idAgendaIdx" class="classCenter">First Agenda</h2>
+<button class="clVoteType" onclick="FctNewVote('ForAgainst')"><span class="_en" style="">Elect For/Against</span><span class="_fr" style="display: none;">Elire Pour ou Contre</span><span class="_de" style="display: none;">Stimme Für / Gegen</span><span class="_ru" style="display: none;">Голосование за/против</span><span class="_sp" style="display: none;">A favor / En contra</span></button>
+<button class="clVoteType" onclick="FctNewVote('ElectPlayer')"><span class="_en" style="">Elect Player</span><span class="_fr" style="display: none;">Elire un joueur</span><span class="_de" style="display: none;">Wähle einen Spieler</span><span class="_ru" style="display: none;">Выбор игрока</span><span class="_sp" style="display: none;">Elige Jugador</span></button>
+<button class="clVoteType" onclick="FctNewVote('ElectPlanet')"><span class="_en" style="">Elect Planet</span><span class="_fr" style="display: none;">Elire une planète</span><span class="_de" style="display: none;">Wähle einen Planeten</span><span class="_ru" style="display: none;">Выбор планеты</span><span class="_sp" style="display: none;">Elige Planeta</span></button>
+<button class="clVoteType" onclick="FctNewVote('ElectLaw')"><span class="_en" style="">Elect Law</span><span class="_fr" style="display: none;">Elire une loi</span><span class="_de" style="display: none;">Wähle Gesetz</span><span class="_ru" style="display: none;">Выбор закона</span><span class="_sp" style="display: none;">Elige Ley</span></button>
+<button class="clVoteType" onclick="FctNewVote('ElectObj')"><span class="_en" style="">Elect Secret Objective</span><span class="_fr" style="display: none;">Elire un objectif secret</span><span class="_de" style="display: none;">Wähle ein geheimes Ziel</span><span class="_ru" style="display: none;">Выбор секретной цели</span><span class="_sp" style="display: none;">Elige un Objetivo Secreto</span></button>
+<button class="clVoteType" onclick="FctNewVote('ElectOther')"><span class="_en" style="">Elect other proposal</span><span class="_fr" style="display: none;">Elire une proposition autre</span><span class="_de" style="display: none;">Wähle einen anderen Vorschlag</span><span class="_ru" style="display: none;">Выдвинуть другое предложение</span><span class="_sp" style="display: none;">Elige Otra Propuesta</span></button>
+<br>
+<button class="clVoteType" onclick="fctAgendaNext()"><span class="_en" style="">Skip</span><span class="_fr" style="display: none;">Passer</span><span class="_de" style="display: none;">Nächster</span><span class="_ru" style="display: none;">Пропустить</span><span class="_sp" style="display: none;">Pasar</span></button>
+</div>
+<div id="idAgendaStepPage">
+<p class="clh3 classCenter _en" style="">Influence counters</p>
+<p class="clh3 classCenter _fr" style="display: none;">Compteurs d'influence</p>
+<p class="clh3 classCenter _de" style="display: none;">Influence counters</p>
+<p class="clh3 classCenter _ru" style="display: none;">Influence counters</p>
+<p class="clh3 classCenter _sp" style="display: none;">Calcular Influencia</p>
+<br>
+<div id="idInfluenceBar" class="clInfluenceBar">
+<span id="idInflu0" class="clInfluPlayerCase">
+<label class="clInfluFactionIcon"><label class="clInfluFactionName">Sol</label></label>
+<input class="clInfluCount" type="number" value="00">
+</span>
+<img class="clArrow2" src="ti4/img/arrow2.png">
+<span id="idInflu1" class="clInfluPlayerCase">
+<label class="clInfluFactionIcon"><label class="clInfluFactionName">Sol</label></label>
+<input class="clInfluCount" type="number" value="00">
+</span>
+<img class="clArrow2" src="ti4/img/arrow2.png">
+<span id="idInflu2" class="clInfluPlayerCase" "="">
+<label class="clInfluFactionIcon"><label class="clInfluFactionName">Sol</label></label>
+<input class="clInfluCount" type="number" value="00">
+</span>
+<img class="clArrow2" src="ti4/img/arrow2.png">
+<span id="idInflu3" class="clInfluPlayerCase">
+<label class="clInfluFactionIcon"><label class="clInfluFactionName">Sol</label></label>
+<input class="clInfluCount" type="number" value="00">
+</span>
+<img class="clArrow2" src="ti4/img/arrow2.png">
+<span id="idInflu4" class="clInfluPlayerCase">
+<label class="clInfluFactionIcon"><label class="clInfluFactionName">Sol</label></label>
+<input class="clInfluCount" type="number" value="00">
+</span>
+<img class="clArrow2" src="ti4/img/arrow2.png">
+<span id="idInflu5" class="clInfluPlayerCase">
+<label class="clInfluFactionIcon"><label class="clInfluFactionName">Sol</label></label>
+<input class="clInfluCount" type="number" value="00">
+</span>
+<img class="clArrow2" src="ti4/img/arrow2.png">
+<span id="idInflu6" class="clInfluPlayerCase">
+<label class="clInfluFactionIcon"><label class="clInfluFactionName">Sol</label></label>
+<input class="clInfluCount" type="number" value="00">
+</span>
+<img class="clArrow2" src="ti4/img/arrow2.png">
+<span id="idInflu7" class="clInfluPlayerCase">
+<label class="clInfluFactionIcon"><label class="clInfluFactionName">Sol</label></label>
+<input class="clInfluCount" type="number" value="00">
+</span>
+</div>
+<br>
+<p class="clh3 classCenter _en" style="">Resolve 2 Agendas</p>
+<p class="clh3 classCenter _fr" style="display: none;">Résoudre 2 Projets</p>
+<p class="clh3 classCenter _de" style="display: none;">Resolve 2 Agendas</p>
+<p class="clh3 classCenter _ru" style="display: none;">Resolve 2 Agendas</p>
+<p class="clh3 classCenter _sp" style="display: none;">Resolver 2da Agenda</p>
+<div class="clAlignText _en" style="">
+<h3 class="clOverable">1. Reveal and read the Agenda</h3>
+<h3 class="clOverable">2. Apply "<u>When</u> an agenda is revealed"</h3>
+<h3 class="clOverable">3. Apply "<u>After</u> an agenda is revealed"</h3>
+<h3 class="clOverable">4. Open discussion</h3>
+<h3 class="clOverable">5. Voting</h3>
+<h3 class="clOverable">6. Result &amp; resolve</h3>
+</div>
+<div class="clAlignText _fr" style="display: none;">
+<h3 class="clOverable">1. Révéler et lire le Projet</h3>
+<h3 class="clOverable">2. Effet "<u>Lorsqu'un</u> projet est révélé"</h3>
+<h3 class="clOverable">3. Effet "<u>Après</u> qu'un projet est révélé"</h3>
+<h3 class="clOverable">4. Débat ouvert</h3>
+<h3 class="clOverable">5. Appel des votes</h3>
+<h3 class="clOverable">6. Résultat &amp; application</h3>
+</div>
+<div class="clAlignText _de" style="display: none;">
+<h3 class="clOverable">1. Reveal and read the Agenda</h3>
+<h3 class="clOverable">2. Apply "<u>When</u> an agenda is revealed"</h3>
+<h3 class="clOverable">3. Apply "<u>After</u> an agenda is revealed"</h3>
+<h3 class="clOverable">4. Open discussion</h3>
+<h3 class="clOverable">5. Voting</h3>
+<h3 class="clOverable">6. Result &amp; resolve</h3>
+</div>
+<div class="clAlignText _ru" style="display: none;">
+<h3 class="clOverable">1. Reveal and read the Agenda</h3>
+<h3 class="clOverable">2. Apply "<u>When</u> an agenda is revealed"</h3>
+<h3 class="clOverable">3. Apply "<u>After</u> an agenda is revealed"</h3>
+<h3 class="clOverable">4. Open discussion</h3>
+<h3 class="clOverable">5. Voting</h3>
+<h3 class="clOverable">6. Result &amp; resolve</h3>
+</div>
+</div> <div class="clAlignText _sp" style="display: none;">
+<h3 class="clOverable">1. Mostrar la carta del Consejo Galáctico</h3>
+<h3 class="clOverable">2. Aplicar "<u>Cuando</u> la agenda es revelada"</h3>
+<h3 class="clOverable">3. Aplicar "<u>Despues</u> que una agenda es revelada"</h3>
+<h3 class="clOverable">4. Abris discusiones</h3>
+<h3 class="clOverable">5. Votar</h3>
+<h3 class="clOverable">6. Resultados &amp; resolver</h3>
+</div>
+<br>
+<button class="clVoteType" onclick="fctAgendaEnd()"><span class="_en" style="">Next</span><span class="_fr" style="display: none;">Suivant</span><span class="_de" style="display: none;">Nächster</span><span class="_ru" style="display: none;">Далее</span><span class="_sp" style="display: none;">Siguiente</span></button>
+</div>
+
+<div id="idVotesTab" class="tabcontent" style="display: none;">
+<br>
+<div class="classCenter">
+<h2 id="idPlayerToVote" type="text" value="t"></h2>
+</div>
+<br>
+<table class="classVoteTable">
+<tbody><tr>
+<td class="classVoteFrame" onclick="FctSelectVote(this)">
+<h2 class="classVoteName flexFont" style="font-size: 10px;">A</h2>
+<h2 class="classVoteTotalInfluence">0</h2>
+<table class="classVotePlayers">
+<tbody><tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+</tbody></table>
+</td>
+<td class="classVoteFrame" onclick="FctSelectVote(this)">
+<h2 class="classVoteName flexFont" style="font-size: 10px;">B</h2>
+<h2 class="classVoteTotalInfluence">0</h2>
+<table class="classVotePlayers">
+<tbody><tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+</tbody></table>
+</td>
+<td class="classVoteFrame" onclick="FctSelectVote(this)">
+<h2 class="classVoteName flexFont" style="font-size: 10px;">C</h2>
+<h2 class="classVoteTotalInfluence">0</h2>
+<table class="classVotePlayers">
+<tbody><tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+</tbody></table>
+</td>
+<td class="classVoteFrame" onclick="FctSelectVote(this)">
+<h2 class="classVoteName flexFont" style="font-size: 10px;">D</h2>
+<h2 class="classVoteTotalInfluence">0</h2>
+<table class="classVotePlayers">
+<tbody><tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+</tbody></table>
+</td>
+<td class="classVoteFrame" onclick="FctSelectVote(this)">
+<h2 class="classVoteName flexFont" style="font-size: 10px;">E</h2>
+<h2 class="classVoteTotalInfluence">0</h2>
+<table class="classVotePlayers">
+<tbody><tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+</tbody></table>
+</td>
+<td class="classVoteFrame" onclick="FctSelectVote(this)">
+<h2 class="classVoteName flexFont" style="font-size: 10px;">F</h2>
+<h2 class="classVoteTotalInfluence">0</h2>
+<table class="classVotePlayers">
+<tbody><tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+</tbody></table>
+</td>
+<td class="classVoteFrame" onclick="FctSelectVote(this)">
+<h2 class="classVoteName flexFont" style="font-size: 10px;">G</h2>
+<h2 class="classVoteTotalInfluence">0</h2>
+<table class="classVotePlayers">
+<tbody><tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+</tbody></table>
+</td>
+<td class="classVoteFrame" onclick="FctSelectVote(this)">
+<h2 class="classVoteName flexFont" style="font-size: 10px;">H</h2>
+<h2 class="classVoteTotalInfluence">0</h2>
+<table class="classVotePlayers">
+<tbody><tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineInfluence"></td>
+</tr>
+</tbody></table>
+</td>
+<td class="classVoteFrameAbstain" onclick="FctSelectVote(this)">
+<h2 id="idAbstain" class="classVoteName flexFont" style="font-size: 10px;">Abstain</h2>
+<h2 id="idDummyInfluence" class="classVoteTotalInfluence">/</h2>
+<table class="classVotePlayers">
+<tbody><tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineNoInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineNoInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineNoInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineNoInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineNoInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineNoInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineNoInfluence"></td>
+</tr>
+<tr class="clVotePlayerLine">
+<td class="clVotePlayerLineFaction"></td>
+<td class="clVotePlayerLineNoInfluence"></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<br>
+<div class="classVoteInterface">
+<span id="idInfluenceVote" class="classNumKey"><span class="_en" style="">Influence:</span><span class="_fr" style="display: none;">Influence:</span><span class="_de" style="display: none;">Einfluss:</span><span class="_ru" style="display: none;">Влияние:</span><span class="_sp" style="display: none;">Influencia:</span></span>
+<span class="classNumKey" onclick="FctKeypadInput(1)">+1</span>
+<span class="classNumKey" onclick="FctKeypadInput(2)">+2</span>
+<span class="classNumKey" onclick="FctKeypadInput(3)">+3</span>
+<span class="classNumKey" onclick="FctKeypadInput(4)">+4</span>
+<span class="classNumKey" onclick="FctKeypadInput(6)">+6</span>
+<span class="classNumKey" onclick="FctKeypadInput(0)">=0</span>
+<span id="idKeyConfirm" class="classNumKey" onclick="FctKeypadInput(255)"><span class="_en" style="">Confirm</span><span class="_fr" style="display: none;">Confirmer</span><span class="_de" style="display: none;">Bestätigen</span><span class="_ru" style="display: none;">Подтвердить</span><span class="_sp" style="display: none;">Confirmar</span></span>
+</div>
+<div class="classCenter">
+<button id="idAgendaNext" class="clMarginAutoOnly" onclick="fctAgendaNext()"><span class="_en" style="">Next</span><span class="_fr" style="display: none;">Suivant</span><span class="_de" style="display: none;">Nächster</span><span class="_ru" style="display: none;">Далее</span><span class="_sp" style="display: none;">Siguiente</span></button>
+</div>
+</div>
+<div id="idModalPlanet" class="modal">
+<div class="modalcontent">
+<h2 class="clModal classCenter _en" style="">Select a planet</h2>
+<h2 class="clModal classCenter _fr" style="display: none;">Choisir une planète</h2>
+<h2 class="clModal classCenter _de" style="display: none;">Wähle einen Planeten</h2>
+<h2 class="clModal classCenter _sp" style="display: none;">Selecciona un Planeta</h2>
+<div id="idPlanetFilters" class="clfilterBar">
+<button class="btnFilter activeFilter" onclick="filterSelection('all')"><span class="_en" style="">All</span><span class="_fr" style="display: none;">Toutes</span><span class="_de" style="display: none;">Alle</span><span class="_ru" style="display: none;">Все</span><span class="_sp" style="display: none;">Todos</span></button>
+<button class="btnFilter" onclick="filterSelection('homeworld')"><span class="_en" style="">Homeworld</span><span class="_fr" style="display: none;">Mondes d'origines</span><span class="_de" style="display: none;">Heimatwelt</span><span class="_ru" style="display: none;">Родная система</span><span class="_sp" style="display: none;">Sistema de Origen</span></button>
+<button class="btnFilter" onclick="filterSelection('cultural')"><span class="_en" style="">Cultural</span><span class="_fr" style="display: none;">Culturelles</span><span class="_de" style="display: none;">Kulturell</span><span class="_ru" style="display: none;">Культурная</span><span class="_sp" style="display: none;">Cultural</span></button>
+<button class="btnFilter" onclick="filterSelection('hazardous')"><span class="_en" style="">Hazardous</span><span class="_fr" style="display: none;">Dangereuses</span><span class="_de" style="display: none;">Gefährlich</span><span class="_ru" style="display: none;">Опасная</span><span class="_sp" style="display: none;">Inhóspito</span></button>
+<button class="btnFilter" onclick="filterSelection('industrial')"><span class="_en" style="">Industrial</span><span class="_fr" style="display: none;">Industrielles</span><span class="_de" style="display: none;">Industriell</span><span class="_ru" style="display: none;">Промышленная</span><span class="_sp" style="display: none;">Industrial</span></button>
+</div>
+<br>
+<div id="idPlanetList" class="classPlanetList">
+<div class="filterDiv showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])" style="display: none;">TEMPLATE</div>
+<div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Abaddon</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Abyz</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Accoen</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Acheron</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Alio Prima</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Ang</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Arc Prime</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Archon Tau</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Archon Ren</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Archon Vail</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Arcturus</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Arinam</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Arnor</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Arretze</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Ashtroth</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Atlas</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Avar</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Ba'kal</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Bereg</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Cealdri</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Centauri</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Coorneeq</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Cormund</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Creus Gate</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Creuss</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Dal Bootha</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Darien</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">The Dark</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Druaa</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Elysium</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Everra</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Fria</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Gral</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Hercant</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Hope's End</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Ixth</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Jeol Ir</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Jol</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Jord</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Kamdorn</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Kraag</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Lazar</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Lisis</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Lisis II</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Lirta IV</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Lodor</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Loki</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Lor</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Maaluuk</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Mallice</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Mecatol Rex</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Meer</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Mehar Xull</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Mellon</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Mirage</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Moll Primus</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Mordai II</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Muaat</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Nar</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Naazir</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Nestphar</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">New Albion</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Perimeter</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Primor</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Quann</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Quecen'n</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Quinarra</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Ragh</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Rarron</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Resculon</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Retillion</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Rigel I</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Rigel II</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Rigel III</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Rokha</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Sakulag</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Saudor</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Sem-Lore</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Shalloq</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Siig</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Starpoint</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Tar'Mann</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Tequ'ran</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Thibah</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Torkan</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Tren'Lak</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Valk</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Vega Major</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Vega Minor</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Vefut II</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Velnor</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Vorhal</div><div class="filterDiv industrial showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Wellon</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Winnu</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Wren Terra</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Xanhact</div><div class="filterDiv cultural showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">XXehan</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Ylir</div><div class="filterDiv hazardous showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">Zohbat</div><div class="filterDiv homeworld showflex" onclick="fctProposal(this,gWord[W_ADD_PLANET][gLang])">[0.0.0]</div></div>
+</div>
+</div>
+<div id="idModalLaw" class="modal">
+<div class="modalcontent">
+<h2 class="clModal classCenter _en" style="">Select a law</h2>
+<h2 class="clModal classCenter _fr" style="display: none;">Choisir une loi</h2>
+<h2 class="clModal classCenter _de" style="display: none;">Wähle ein Gesetz</h2>
+<h2 class="clModal classCenter _ru" style="display: none;">Выберите закон</h2>
+<h2 class="clModal classCenter _sp" style="display: none;">Selecciona una Ley</h2>
+<div id="idLawList" class="classPlanetList">
+<div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])" style="display: none;">TEMPLATE</div>
+<div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Anti-Intellectual Revolution</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Articles of War</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Checks and Balances</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Classified Document Leaks</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Committee Formation</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Conventions of War</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Core Mining</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Demilitarized Zone</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Enforced Travel Ban</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Executive Sanctions</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Fleet Regulations</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Holy Planet of Ixth</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Homeland Defense Act</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Imperial Arbiter</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Minister of Commerce</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Minister of Exploration</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Minister of Industry</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Minister of Peace</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Minister of Policy</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Minister of Sciences</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Minister of War</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Nexus Sovereignty</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Political Censure</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Prophecy of Ixth</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Publicize Weapon Schematics</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Regulated Conscription</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Representative Government </div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Research Team: Biotic</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Research Team: Cybernetic</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Research Team: Propulsion</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Research Team: Warfare</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Search Warrant</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Senate Sanctuary</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Shard of the Throne</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Shared Research</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Terraforming Initiative</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">The Crown of Emphidia</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">The Crown of Thalnos</div><div class="filterDivLaw showflex" onclick="fctProposal(this,gWord[W_ADD_LAW][gLang])">Wormhole Reconstruction</div></div>
+</div>
+</div>
+<div id="idModalObj" class="modal">
+<div class="modalcontent">
+<h2 class="clModal classCenter _en" style=""> Select a revealed Secret Objective </h2>
+<h2 class="clModal classCenter _fr" style="display: none;"> Choisir un objectif Secret révélé </h2>
+<h2 class="clModal classCenter _de" style="display: none;"> Wähle einen aufgedeckten Geheimauftrag </h2>
+<h2 class="clModal classCenter _ru" style="display: none;"> Выберите раскрытую карту секретной цели </h2>
+<h2 class="clModal classCenter _sp" style="display: none;"> Selecciona y revela un Objetivo Secreto </h2>
+<div id="idObjList" class="classPlanetList">
+<div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])" style="display: none;">TEMPLATE</div>
+<div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Adapt New Strategies</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Become a Martyr</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Become the Gatekeeper</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Betray a Friend</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Brave the Void</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Control the Region</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Cut Supply Lines</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Darken the Skies</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Defy Space and Time</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Demonstrate Your Power</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Destroy Heretical Works</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Destroy Their Greatest Ship</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Dictate Policy</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Drive the Debate</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Establish a Perimeter</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Establish Hegemony</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Fight With Precision</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Forge an Alliance</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Form a Spy Network</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Foster Cohesion</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Fuel the War Machine</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Gather a Mighty Fleet</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Hoard Raw Materials</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Learn Secrets of the Cosmos</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Monopolize Production</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Make an Example of Their World</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Master the Laws of Physics</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Mine Rare Metals</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Occupy the Seat of the Empire</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Produce En Masse</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Prove Endurance</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Seize An Icon</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Spark a Rebellion</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Stake your Claim</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Strengthen Bonds</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Threaten Enemies</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Turn Their Fleets to Dust</div><div class="filterDivObj showflex" onclick="fctProposal(this,gWord[W_ADD_OBJECTIVE][gLang])">Unveil Flagship</div></div>
+</div>
+</div>
+<div id="idModalStrategy" class="modal">
+<div class="modalcontent">
+<h2 class="clModal classCenter _en" style="">Select a strategy card</h2>
+<h2 class="clModal classCenter _fr" style="display: none;">Choisir une carte Stratégie</h2>
+<h2 class="clModal classCenter _de" style="display: none;">Select a strategy card</h2>
+<h2 class="clModal classCenter _ru" style="display: none;">Select a strategy card</h2>
+<h2 class="clModal classCenter _sp" style="display: none;">Selecciona una carta de Estrategia</h2>
+<div id="idStrategyList" class="classPlanetList">
+<div class="filterDivStrategy showflex" onclick="fctProposal(this,gWord[W_ADD_STRATEGY][gLang])" style="display: none;">TEMPLATE</div>
+<div class="filterDivStrategy showflex" onclick="fctProposal(this,gWord[W_ADD_STRATEGY][gLang])">Leadership</div><div class="filterDivStrategy showflex" onclick="fctProposal(this,gWord[W_ADD_STRATEGY][gLang])">Diplomacy</div><div class="filterDivStrategy showflex" onclick="fctProposal(this,gWord[W_ADD_STRATEGY][gLang])">Politics</div><div class="filterDivStrategy showflex" onclick="fctProposal(this,gWord[W_ADD_STRATEGY][gLang])">Construction</div><div class="filterDivStrategy showflex" onclick="fctProposal(this,gWord[W_ADD_STRATEGY][gLang])">Trade</div><div class="filterDivStrategy showflex" onclick="fctProposal(this,gWord[W_ADD_STRATEGY][gLang])">Warfare</div><div class="filterDivStrategy showflex" onclick="fctProposal(this,gWord[W_ADD_STRATEGY][gLang])">Technology</div><div class="filterDivStrategy showflex" onclick="fctProposal(this,gWord[W_ADD_STRATEGY][gLang])">Imperial</div></div>
+</div>
+</div>
+<div id="idModalOther" class="modal">
+<div class="modalcontent">
+<h2 class="clModal classCenter _en" style="">Select a proposal</h2>
+<h2 class="clModal classCenter _fr" style="display: none;">Choisir une proposition</h2>
+<h2 class="clModal classCenter _de" style="display: none;">Wähle einen Vorschlag</h2>
+<h2 class="clModal classCenter _ru" style="display: none;">Выбрать предложение</h2>
+<h2 class="clModal classCenter _sp" style="display: none;">Elige una propuesta</h2>
+<div id="idOtherList" class="classPlanetList">
+<div class="filterDivOther showflex" onclick="fctProposal(this,gWord[W_ADD_PROPOSAL][gLang])" style="display: none;">TEMPLATE</div>
+<div class="filterDivOther showflex" onclick="fctProposal(this,gWord[W_ADD_PROPOSAL][gLang])">Proposal A</div><div class="filterDivOther showflex" onclick="fctProposal(this,gWord[W_ADD_PROPOSAL][gLang])">Proposal B</div><div class="filterDivOther showflex" onclick="fctProposal(this,gWord[W_ADD_PROPOSAL][gLang])">Proposal C</div><div class="filterDivOther showflex" onclick="fctProposal(this,gWord[W_ADD_PROPOSAL][gLang])">Proposal D</div><div class="filterDivOther showflex" onclick="fctProposal(this,gWord[W_ADD_PROPOSAL][gLang])">Proposal E</div><div class="filterDivOther showflex" onclick="fctProposal(this,gWord[W_ADD_PROPOSAL][gLang])">Proposal F</div><div class="filterDivOther showflex" onclick="fctProposal(this,gWord[W_ADD_PROPOSAL][gLang])">Proposal G</div><div class="filterDivOther showflex" onclick="fctProposal(this,gWord[W_ADD_PROPOSAL][gLang])">Proposal H</div></div>
+</div>
+</div>
+<div id="SpaceBattle" class="tabcontent" style="display: none;">
+<table>
+<tbody><tr>
+<td><label>img</label></td>
+<td><label>Flagship</label></td>
+<td><input type="number" value="8"></td>
+<td><input type="number" value="1"></td>
+</tr>
+</tbody></table>
+</div>
+<div id="idEndGame" class="tabcontent" style="display: none;">
+<div>
+<h2 class="classCenter">
+<span class="_en" style="">Swear your allegiance to the new Galactic Emperor</span>
+<span class="_fr" style="display: none;">Jurez alégeance au nouvel Empereur Galactique</span>
+<span class="_de" style="display: none;">Schwöre deine Treue dem neuen Galaktischen Imperator</span>
+<span class="_ru" style="display: none;">Преклонитесь перед новым Галактическим Императором</span>
+<span class="_sp" style="display: none;">Jura tu sumisión al nuevo Emperador Galáctico</span>
+</h2>
+<div id="idEndScreen">
+<img id="idEmperor" src="ti4/img/saturn_mini.png">
+<div id="idStats">
+<div id="idStatsList">
+<table id="idRanking">
+<tbody><tr class="_en" style=""><th></th><th>Faction</th><th>VP</th><th>Timer</th><th>Speaker</th><th>Influence</th></tr>
+<tr class="_fr" style="display: none;"><th></th><th>Faction</th><th>PV</th><th>Temps</th><th>Orateur</th><th>Influence</th></tr>
+<tr class="_de" style="display: none;"><th></th><th>Fraktion</th><th>SP</th><th>Zeit</th><th>Sprecher</th><th>Einfluss</th></tr>
+<tr class="_ru" style="display: none;"><th></th><th>Faction</th><th>VP</th><th>Timer</th><th>Speaker</th><th>Влияние</th></tr>
+<tr class="_sp" style="display: none;"><th></th><th>Facción</th><th>PV</th><th>Tiempo</th><th>Portavoz</th><th>Influencia</th></tr>
+<tr id="idRk0" class="clRk"><td><img class="clRkIcon" src="ti4/img/arborec.png"></td><td class="clRkFaction">Arborec</td><td class="clRkVP">10VP</td><td class="clRkTimer">0</td><td class="clRkSpeaker">0</td><td class="clRkInfluence">0</td></tr>
+<tr class="clRk"><td><img class="clRkIcon" src="ti4/img/arborec.png"></td><td class="clRkFaction">Arborec</td><td class="clRkVP">10VP</td><td class="clRkTimer">0</td><td class="clRkSpeaker">0</td><td class="clRkInfluence">0</td></tr>
+<tr class="clRk"><td><img class="clRkIcon" src="ti4/img/arborec.png"></td><td class="clRkFaction">Arborec</td><td class="clRkVP">10VP</td><td class="clRkTimer">0</td><td class="clRkSpeaker">0</td><td class="clRkInfluence">0</td></tr>
+<tr class="clRk"><td><img class="clRkIcon" src="ti4/img/arborec.png"></td><td class="clRkFaction">Arborec</td><td class="clRkVP">10VP</td><td class="clRkTimer">0</td><td class="clRkSpeaker">0</td><td class="clRkInfluence">0</td></tr>
+<tr class="clRk"><td><img class="clRkIcon" src="ti4/img/arborec.png"></td><td class="clRkFaction">Arborec</td><td class="clRkVP">10VP</td><td class="clRkTimer">0</td><td class="clRkSpeaker">0</td><td class="clRkInfluence">0</td></tr>
+<tr class="clRk"><td><img class="clRkIcon" src="ti4/img/arborec.png"></td><td class="clRkFaction">Arborec</td><td class="clRkVP">10VP</td><td class="clRkTimer">0</td><td class="clRkSpeaker">0</td><td class="clRkInfluence">0</td></tr>
+<tr class="clRk"><td><img class="clRkIcon" src="ti4/img/arborec.png"></td><td class="clRkFaction">Arborec</td><td class="clRkVP">10VP</td><td class="clRkTimer">0</td><td class="clRkSpeaker">0</td><td class="clRkInfluence">0</td></tr>
+<tr class="clRk"><td><img class="clRkIcon" src="ti4/img/arborec.png"></td><td class="clRkFaction">Arborec</td><td class="clRkVP">10VP</td><td class="clRkTimer">0</td><td class="clRkSpeaker">0</td><td class="clRkInfluence">0</td></tr>
+</tbody></table>
+<span id="idEndTiming">
+<div><span class="_en" style="">Game duration: </span><span class="_fr" style="display: none;">Durée de la partie: </span><span class="_de" style="display: none;">Game duration: </span><span class="_ru" style="display: none;">Продолжительность игры: </span><span class="_sp" style="display: none;">Duración del Juego: </span><span id="idEndGameDuration"></span></div>
+<br>
+<div><span class="_en" style="">Number of rounds: </span><span class="_fr" style="display: none;">Nombre de Rounds: </span><span class="_de" style="display: none;">Anzahl der Runden: </span><span class="_ru" style="display: none;">Количество раундов: </span><span class="_sp" style="display: none;">Número de Turnos: </span><span id="idEndRound"></span></div>
+</span>
+</div>
+<br>
+<div class="classCenter">
+<button onclick="fctEndBack()"><span class="_en" style="">Back</span><span class="_fr" style="display: none;">Retour</span><span class="_de" style="display: none;">Zurück</span><span class="_ru" style="display: none;">Назад</span><span class="_sp" style="display: none;">Volver</span></button>
+</div>
+</div>
+<br>
+</div>
+</div>
+</div>
+<div id="idEndButton" onclick="fctEndGame()">
+<h3 id="idEndTxt" class="classCenter"><span class="_en" style="">End game</span><span class="_fr" style="display: none;">Fin</span><span class="_de" style="display: none;">Beende Spiel</span><span class="_ru" style="display: none;">Закончить игру</span><span class="_sp" style="display: none;">Fin del Juego</span></h3>
+</div>
+<div id="idModalOptions" class="modal">
+<div class="modalcontent">
+<h2 class="classCenter">Options</h2>
+<div class="clLine">
+<span class="clModalText clBold _en" style="">Use the Victory Point meter top bar</span>
+<span class="clModalText clBold _fr" style="display: none;">Utiliser les compteurs de PV</span>
+<span class="clModalText clBold _de" style="display: none;">Verwende die Siegpunktleiste am oberen Rand </span>
+<span class="clModalText clBold _ru" style="display: none;">Использовать счетчик победных очков в верхней панели</span>
+<span class="clModalText clBold _sp" style="display: none;">Utilizar el contador de Puntos de Victoria</span>
+<label class="switch clFloatRight">
+<input onclick="fctShowVPBar(this)" type="checkbox" checked="">
+<span class="checker"></span>
+</label>
+</div>
+<br>
+<br>
+<div class="clLine">
+<div class="clModalText">
+<span class="clBold _en" style="">Victory Points limit</span>
+<span class="clBold _fr" style="display: none;">Limite de Points de Victoire</span>
+<span class="clBold _de" style="display: none;">Siegpunktlimit</span>
+<span class="clBold _ru" style="display: none;">Лимит победных очков</span>
+<span class="clBold _sp" style="display: none;">Límite de Puntos de Victoria</span>
+<input id="idOptionVPWin" class="clFloatRight clNumberInput" type="number" min="0" max="20" value="10">
+<br>
+<span class="_en" style="">End game button will appear when reaching the limit</span>
+<span class="_fr" style="display: none;">Atteindre la limite affiche le bouton de fin de partie</span>
+<span class="_de" style="display: none;">End game button will appear when reaching the limit</span>
+<span class="_ru" style="display: none;">Кнопка "Закончить игру" появится после достижения лимита победных очков</span>
+<span class="_sp" style="display: none;">El botón de Fin de Juego aparecerá al alcanzar el límite</span>
+</div>
+</div>
+<br>
+<br>
+<div class="clLine">
+<span class="clModalText clBold _en" style="">Full screen </span>
+<span class="clModalText clBold _fr" style="display: none;">Plein écran</span>
+<span class="clModalText clBold _de" style="display: none;">Vollbild</span>
+<span class="clModalText clBold _ru" style="display: none;">Полноэкранный режим</span>
+<span class="clModalText clBold _sp" style="display: none;">Pantalla completa </span>
+<label id="idOptionFullScreen" class="switch clFloatRight">
+<input onclick="fctFullScreen(this)" type="checkbox">
+<span class="checker"></span>
+</label>
+</div>
+<br>
+<br>
+<div class="clLine">
+<div class="clModalText">
+<span class="clBold _en" style="">Inactivity timer (minutes)</span>
+<span class="clBold _fr" style="display: none;">Chronométre d'inactivité (minutes)</span>
+<span class="clBold _de" style="display: none;">Inaktivitätstimer (minutes)</span>
+<span class="clBold _ru" style="display: none;">Таймер неактивности (в минутах)</span>
+<span class="clBold _sp" style="display: none;">Cronómetro de Inactividad (minutos)</span>
+<input id="idOptionInactivityTimer" class="clFloatRight clNumberInput" type="number" min="5" max="60" value="15">
+<br>
+<span class="_en" style="">Show warning message if no activity for the given duration. It helps to keep the game flows.</span>
+<span class="_fr" style="display: none;">Affiche un message d'alerte en cas d'inactivité. Permet de conserver la fluidité du jeu</span>
+<span class="_de" style="display: none;">Zeige eine Warnmeldung bei Inaktivität. Dies hilft, den Spielfluss aufrecht zu erhalten.</span>
+<span class="_ru" style="display: none;">Показывть предупреждающее сообщение, если не было никакой активности за выбранный период времени. Это помогает ускорить игру.</span>
+<span class="_sp" style="display: none;">Mostrar mensaje de advertencia si no hay actividad en el tiempo fijado. Esto ayuda a mantener el juego fluido.</span>
+<br>
+</div>
+</div>
+<br>
+<br>
+<div class="clLine">
+<div class="clModalText">
+<span class="clBold _en" style="">Player count-up timer resets each turn</span>
+<span class="clBold _fr" style="display: none;">Le chrono des joueurs se réinitialise chaque tour</span>
+<span class="clBold _de" style="display: none;">Der Zeitzähler des Spielers wird in jedem Zug zurückgesetzt</span>
+<span class="clBold _ru" style="display: none;">Счетчик времени игрока сбрасывается каждый ход</span>
+<span class="clBold _sp" style="display: none;">El contador de tiempo de cada jugador se reinicia cada turno</span>
+<label id="idOptionPlayerTimer" class="switch clFloatRight">
+<input id="idPlyerTimerCheck" type="checkbox">
+<span class="checker"></span>
+</label>
+<br>
+<span class="_en" style="">If unchecked, total time per player is shown.</span>
+<span class="_fr" style="display: none;">Si désactivé, le temps total par joueur est affiché.</span>
+<span class="_de" style="display: none;">Wenn nicht angewählt, wird die Gesamtzeit pro Spieler angezeigt.</span>
+<span class="_ru" style="display: none;">Если отключено, будет показано общее время на ходы.</span>
+<span class="_sp" style="display: none;">Si no esta marcado, el tiempo total por jugador se mostrará.</span>
+<br>
+</div>
+</div>
+<br>
+<br>
+<div class="clLine">
+<div class="clModalText">
+<span class="clBold _en" style="">Decision bar (seconds)</span>
+<span class="clBold _fr" style="display: none;">Barre de décision(secondes)</span>
+<span class="clBold _de" style="display: none;">Decision timer (seconds)</span>
+<span class="clBold _ru" style="display: none;">Decision timer (seconds)</span>
+<span class="clBold _sp" style="display: none;">Decision timer (seconds)</span>
+<input id="idOptionDecisionTimer" class="clFloatRight clNumberInput" type="number" min="20" max="180" value="90">
+<br>
+<span class="_en" style="">Progress bar to prevent analysis-paralysis. Repeats itself or click to reset.</span>
+<span class="_fr" style="display: none;">Barre de progrès pour empécher l'analysis-paralysis. Periodique ou cliquer pour relancer.</span>
+<span class="_de" style="display: none;">Progress bar to prevent analysis-paralysis. Repeats itself or click to reset.</span>
+<span class="_ru" style="display: none;">Progress bar to prevent analysis-paralysis. Repeats itself or click to reset.</span>
+<span class="_sp" style="display: none;">Progress bar to prevent analysis-paralysis. Repeats itself or click to reset.</span>
+<br>
+</div>
+</div>
+<br>
+<br>
+<div class="clLine">
+<div class="clModalText">
+<span class="clBold _en" style="">During Agenda phase, show detailed voting steps instead of vote counter</span>
+<span class="clBold _fr" style="display: none;">Afficher les étapes de la phase Projet au lieu du compteur de votes</span>
+<span class="clBold _de" style="display: none;">Show detailed voting steps during Agenda phase instead of vote counter</span>
+<span class="clBold _ru" style="display: none;">Show detailed voting steps during Agenda phase instead of vote counter</span>
+<span class="clBold _sp" style="display: none;">Durante la fase de Concejo Galáctico, muestra una guia detallada del proceso, en lugar de un contador de votos</span>
+<label id="idOptionAgendaPage" class="switch clFloatRight">
+<input id="idAgendaPageCheck" type="checkbox" checked="">
+<span class="checker"></span>
+</label>
+<br>
+<span class="_en" style="">Uncheck to use the old and complex voting system.</span>
+<span class="_fr" style="display: none;">Désactiver pour utiliser l'ancien systeme complexe de votes.</span>
+<span class="_de" style="display: none;">Uncheck to use the old and complex voting system.</span>
+<span class="_ru" style="display: none;">Uncheck to use the old and complex voting system.</span>
+<span class="_sp" style="display: none;">Si no esta marcado, se utiliza el viejo y complejo sistema de votación.</span>
+<br>
+</div>
+</div>
+<br>
+<div class="classCenter">
+<br>
+<span id="idOptionNote">
+<i class="_en" style="">Note: These options can be changed any time during the game by the top-right icon.</i>
+<i class="_fr" style="display: none;">Note: Ces options seront accessible pendant la partie par l'îcone en haut à droite.</i>
+<i class="_de" style="display: none;">Anmerkung: Diese Optionen können jederzeit geändert werden, in dem das Icon oben rechts gedückt wird.</i>
+<i class="_ru" style="display: none;">Прмечание: эти опции можно менять в любой момент игры, используя иконку в верхней правой части экрана.</i>
+<i class="_sp" style="display: none;">Nota: Estas opciones se pueden cambiar en cualquier momento durante el juego, en el icono de la parte superior derecha.</i>
+</span>
+</div>
+<br>
+<div class="classCenter">
+<button id="idOptionsBack" onclick="location.reload()"><span class="_en" style="">Cancel</span><span class="_fr" style="display: none;">Annuler</span><span class="_de" style="display: none;">Abbruch</span><span class="_ru" style="display: none;">Отмена</span><span class="_sp" style="display: none;">Cancelar</span></button>
+<button id="idConfirmOptions" onclick="fctCloseOptions()"><span class="_en" style="">Next</span><span class="_fr" style="display: none;">Suivant</span><span class="_de" style="display: none;">Nächster</span><span class="_ru" style="display: none;">Далее</span><span class="_sp" style="display: none;">Siguiente</span></button>
+</div>
+</div>
+</div>
+<div id="infoAbout" class="tabcontent classCenter" style="display: none;">
+<h2>Version: <span id="idVersion">6.02</span></h2>
+<h2>Made by Stéphane "Saturn Nitrik" Démots </h2>
+<img src="ti4/img/saturn_mini.png">
+<p><a href="http://extraboard.net">Extraboard.net</a></p>
+<p>Credits:</p>
+<ul>
+<li>Twilight Imperium IV pictures are own by <a href="https://www.fantasyflightgames.com">Fantasy Flight Games</a></li>
+<li>Galaxy tiles from <a href="https://ti4-map-generator.derekpeterson.ca/">TI4 Galaxy map generator</a></li>
+<li>Blue space background by <a href="https://www.pinterest.fr/pin/585256914047444979/">Ko Ortaokulu</a></li>
+<li>Some icons from <a href="https://game-icons.net/">Game Icons</a></li>
+<li>Faction icons by Lars Riecken</li>
+<li>Alert frame by <a href="https://pixabay.com/">Perlinator</a></li>
+</ul><br>
+<p>Translations:</p>
+<ul>
+<li>German by Barci</li>
+<li>Russian by Антон Синько</li>
+<li>Spanish by Sabathius</li>
+</ul>
+<br>
+<div class="classCenter">
+<button class="clMarginAutoOnly" onclick="fctAboutBack()"><span class="_en" style="">Back</span><span class="_fr" style="display: none;">Retour</span><span class="_de" style="display: none;">Zurück</span><span class="_ru" style="display: none;">Назад</span><span class="_sp" style="display: none;">Volver</span></button>
+</div>
+</div>
+<div id="infoFAQ" class="tabcontent classCenter" style="display: none;">
+<div class="_en" style="">
+<h2>F.A.Q</h2>
+<p class="clQuestion">How to return the main menu ?</p>
+<p>The page needs to be refresh.</p>
+<p class="clQuestion">How to pause the game ?</p>
+<p>By clicking on the timer on the top-left corner.</p>
+<p class="clQuestion">How to decrease the Victory Points ?</p>
+<p>The VP counters reset to 0 after the max is reached. So to decrease it needs to be looped over.</p>
+<p class="clQuestion">How to record twice the same action in the action phase ?</p>
+<p>No need to, simply press once the corresponding action button.</p>
+<p class="clQuestion">What is the use of influence counters in the Agenda phase page ?</p>
+<p>It can be used to count either total influence or votes per player. It is up to you !</p>
+<br><br>
+</div>
+<div class="_fr" style="display: none;">
+<h2>F.A.Q</h2>
+<p class="clQuestion">Comment revenir sur la page d'accueils ?</p>
+<p>La page doit être rechargée (F5).</p>
+<p class="clQuestion">Comment mettre en pause la partie?</p>
+<p>En cliquant sur le chronomètre en haut à gauche.</p>
+<p class="clQuestion">Comment réduire les Points de Victoires (PV) ?</p>
+<p>Les compteurs de PV retourne à 0 après la valeur maximale.</p>
+<p class="clQuestion">Comment entrer 2 fois la même action pendant la phase d'action ?</p>
+<p>Il n'y a pas besoin, pressez simplement le bouton de l'action correspondante 1 seule fois.</p>
+<p class="clQuestion">Comment s'utilise les compteurs d'Influence de la page de Phase Projet ?</p>
+<p>Ils s'utilisent pour compter le total d'influence ou bien les votes des joueurs. Comme vous voulez !</p>
+<br><br>
+</div>
+<div class="_de" style="display: none;">
+<h2>F.A.Q</h2>
+<p class="clQuestion">Wie komme ich in das Hauptmenue zurück ?</p>
+<p>Die Seite benötigt einen Neuaufbau (F5)</p>
+<p class="clQuestion">Wie kann ich das Spiel pausieren ?</p>
+<p>Indem ich auf dem Timer oben links in der Ecke klicke.</p>
+<p class="clQuestion">Wir kann ich Siegpunkte verringern ?</p>
+<p>Die Siegpunkte werden auf Null zurückkesetzt nachdem das Maximum erreicht ist. Eine Verringerung ist möglich, indem die Max-Grenze überschritten wird.</p>
+<p class="clQuestion">Wir zecihne ich zweimal die gleiche aktion in der Aktionsphase ausführen ?</p>
+<p>Es besteht keine Notwendigkeit hierzu. Einfach einmal den dazugeörigen Aktionsknopf drücken.</p>
+<p class="clQuestion">What is the use of influence counters in the Agenda phase page ?</p>
+<p>It can be used to count either total influence or votes per player. It is up to you !</p>
+<br><br>
+</div>
+<div class="_ru" style="display: none;">
+<h2>Часто задаваемые вопросы</h2>
+<p class="clQuestion">Как вернуться на главный экран?</p>
+<p>Нужно обновить страничку.</p>
+<p class="clQuestion">Как поставить игру на паузу?</p>
+<p>Нужно нажать на таймер вверху слева.</p>
+<p class="clQuestion">Как уменьшить количество победных очков?</p>
+<p>Счетчик ПО сбрасывается после достижения максимума. Чтобы сбросить очки, дойдите до максимума и начните с 0.</p>
+<p class="clQuestion">Как зарегистрировать дважды одно и то же действие во время фазы действий?</p>
+<p>В этом нет нужды, просто нажмите на подходящую кнопку один раз.</p>
+<p class="clQuestion">What is the use of influence counters in the Agenda phase page ?</p>
+<p>It can be used to count either total influence or votes per player. It is up to you !</p>
+<br><br>
+</div>
+<div class="_sp" style="display: none;">
+<h2>F.A.Q</h2>
+<p class="clQuestion">¿Cómo regreso al menu principal?</p>
+<p>Solo refresca la pagina.</p>
+<p class="clQuestion">¿Cómo pauso el juego?</p>
+<p>Haciendo click en el cronómetro en la esquina superior izquierda.</p>
+<p class="clQuestion">¿Cómo disminuyo los Puntos de Victoria?</p>
+<p>El contador de PV se reinicia a 0 despues de alcanzar el limite. Asi que para disminuirlo, hace falta completar el ciclo.</p>
+<p class="clQuestion">¿Cómo grabo 2 veces la misma accion en la Fase de Acción?</p>
+<p>No es necesario, solo presiona una vez el correspondiente botón de acción.</p>
+<p class="clQuestion">¿Cual es la utilidad del contador de influencia en la Fase del Consejo Galáctico?</p>
+<p>Puede ser usado para contar el total de Influencia o los votos por jugador. ¡Como gustes!</p>
+<br><br>
+</div>
+<div class="classCenter">
+<button class="clMarginAutoOnly" onclick="fctAboutBack()"><span class="_en" style="">Back</span><span class="_fr" style="display: none;">Retour</span><span class="_de" style="display: none;">Zurück</span><span class="_ru" style="display: none;">Назад</span><span class="_sp" style="display: none;">Volver</span></button>
+</div>
+</div>
+<div id="infoChangeLog" class="tabcontent" style="display: none;">
+<p>v6.2 - 2022.05.04:</p>
+<ul>
+<li>Added "The Keleres Council" from Codex III</li>
+<li>Fixed missing French translation of PoK factions</li>
+</ul>
+<p>v6.1 - 2021.06.07:</p>
+<ul>
+<li>Spanish translation by Sabathius</li>
+<li>PoK Agenda options added to the detailed voting phase</li>
+</ul>
+<p>v6.0 - 2020.11.01: The prophecy is alive</p>
+<ul>
+<li>Changed player color to pink instead of grey</li>
+<li>Added the 7 new factions from "Prophecy Of Kings"</li>
+<li>Added Influence Counters on Agenda phase page</li>
+</ul>
+<p>v5.0 - 2019.12.20:</p>
+<ul>
+<li>Russian translation by Антон Синько</li>
+<li>New faction icons by Lars Riecken</li>
+<li>New Agenda phase page with detailed steps</li>
+<li>Extracomputer statistics page</li>
+</ul>
+<p>v4.1 - 2019.03.05:</p>
+<ul>
+<li>German translation by Barci added</li>
+</ul>
+<p>v4.0 - 2019.01.16:</p>
+<ul>
+<li>New Action phase interface with better visual and inputs</li>
+<li>New Initiative bar display on Status phase page</li>
+<li>More end game statistics (time per player, Speaker owners, total influence...)</li>
+<li>New count up timer per player</li>
+<li>New option to display player total timers</li>
+<li>End of Strategy phase windows changed to buttons</li>
+<li>Smarter Speaker windows summoning (no more automatic pop-up window)</li>
+<li>New FAQ page (on top-left icon)</li>
+<li>Fix the Leadership and Diplomacy swapped color</li>
+<li>Fix the "allegiance" sentence</li>
+</ul>
+<p>v3.1 - 2019.01.02:</p>
+<ul>
+<li>Fix Faction list issue after several language switch</li>
+<li>Fix Top bar issue on toggle at first Option menu</li>
+</ul>
+<p>v3.0 - 2019.01.01: "Vers l'infini"</p>
+<ul>
+<li>French language added</li>
+<li>Players' icons in top bar are now shown in speaker order</li>
+<li>New end game page</li>
+<li>New 'max VP' option added</li>
+<li>New home page and menu page</li>
+<li>New Reset Strategy Phase button</li>
+<li>New Skip button in Agenda phase</li>
+<li>Some typo fixed</li>
+</ul>
+<p>v2.1 - 2018.12.08: Fix for Firefox compatibility</p>
+<p>v2.0 - 2018:12:05: "Shooting Stars"
+</p><ul>
+<li>New "End Of Strategy Phase" window to play related cards</li>
+<li>Trade Goods are now shown on unselected Strategy Cards</li>
+<li>VP counters interface changed to "click to increase"</li>
+<li>Interface improvements for smartphone display</li>
+<li>"Turn" changed to "Round"</li>
+<li>Fixed Yssaril name typo</li>
+<li>Fixed Option panel name</li>
+</ul>
+<p>v1.0 - 2018.11.07: First release</p>
+<p>v0.0 - 2018.06.06: Start of development</p>
+<div class="classCenter">
+<button class="clMarginAutoOnly" onclick="fctAboutBack()"><span class="_en" style="">Back</span><span class="_fr" style="display: none;">Retour</span><span class="_ru" style="display: none;">Назад</span></button>
+</div>
+</div>
+<div id="infoContact" class="tabcontent" style="display: none;">
+</div>
+<div id="idModalTransition" class="clModalTransition">
+<div class="modalcontentTransition">
+<img>
+<h2 id="idTransitionTurn" class="clModal classCenter">Round 1</h2>
+<h2 id="idTransitionPhase" class="clModal classCenter">Strategy Phase</h2>
+<img>
+</div>
+</div>
+<div id="idSpeakerToken" onclick="fctShowSpeaker(1)">
+<h3 id="idSpeakerOwner" class="classCenter">SPEAKER</h3>
+</div>
+<div id="idInactivityModal" class="clMsgBox">
+<span class="close" onclick="fctClose('idInactivityModal')">×</span>
+<p class="classCenter">
+<span class="_en" style="">Warning : No activity for </span>
+<span class="_fr" style="display: none;">Attention :</span>
+<span class="_de" style="display: none;">Achtung: Keine Aktivität seit </span>
+<span class="_ru" style="display: none;">Предупреждение : не было активности </span>
+<span class="_sp" style="display: none;">Atención : Sin actividad por </span>
+<span id="idInactivityValue1"></span>
+<span class="_en" style=""> minutes</span>
+<span class="_fr" style="display: none;"> minutes sans activité</span>´
+<span class="_de" style="display: none;"> Minuten</span>
+<span class="_ru" style="display: none;"> минут</span>
+<span class="_sp" style="display: none;"> minutos</span>
+</p>
+</div>
+<div id="idModalStopAlert" class="modalStop">
+<div class="modalcontentStop">
+<h2 class="clModal classCenter"><span id="idInactivityValue2"></span><span class="_en" style=""> minutes without activity</span><span class="_fr" style="display: none;"> minutes sans activité</span><span class="_de" style="display: none;"> Minuten ohne Aktivität</span><span class="_ru" style="display: none;"> минут без активности</span><span class="_sp" style="display: none;"> minutos sin actividad</span></h2>
+<h2 class="clModal classCenter"><span class="_en" style="">The game timer is paused</span><span class="_fr" style="display: none;">Le jeu est en pause</span><span class="_ru" style="display: none;">Игровой таймер поставлен на паузу</span><span class="_sp" style="display: none;">El cronómetro del juego esta en pausa</span></h2>
+<br>
+<div class="classCenter">
+<button onclick="fctClose('idModalStopAlert')"><span class="_en" style="">Continue</span><span class="_fr" style="display: none;">Continuer</span><span class="_de" style="display: none;">Weiter</span><span class="_ru" style="display: none;">Продолжить</span><span class="_sp" style="display: none;">Continuar</span></button>
+</div>
+</div>
+</div>
+<p id="idDebug"></p>
+<script src="ti4/ti4.js"></script>
+<script src="ti4/lang.js"></script>
+<script src="ti4/main.js"></script>
+<script src="ti4/setup.js"></script>
+<script src="ti4/strategies.js"></script>
+<script src="ti4/status.js"></script>
+<script src="ti4/votes.js"></script>
+<script src="ti4/news.js"></script>
+
+</body></html>
